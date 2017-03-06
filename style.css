@@ -43,7 +43,7 @@ header {
 }
 .navbar {
         display: flex;
-        flex-direction: column;
+        flex-flow: column nowrap;
         justify-content: space-around;
         padding: 0;
         margin: 0;
@@ -63,6 +63,31 @@ header {
 }
 .navbar a:hover {
         background-color: #d7d7d7;
+}
+
+@media all and (min-width: 500px) {
+}
+@media all and (min-width: 800px) {
+        nav, main {
+                width: 80%;
+                margin: auto;
+        }
+        .burger {
+                display: none;
+        }
+        .mobile-hidden { /* Not on mobile anymore */
+                display: flex;
+        }
+        .navbar {
+                flex-flow: row nowrap;
+                justify-content: space-between;
+        }
+        .navbar li {
+                flex: 1 1 auto;
+                width: 20%;
+                margin: 0;
+        }
+
 }
 
 /****** beginnings ******/
