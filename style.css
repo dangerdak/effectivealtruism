@@ -5,6 +5,24 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
+body {
+        font-size: 1.2em;
+}
+.title {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        background: pink;
+        height: 18em;
+        font-size: 1.5em;
+        display: flex;
+        flex-flow: row nowrap;
+}
+.title h1 {
+        margin: 0;
+
+}
+
 @media all and (min-width: 800px) {
         nav, main {
                 width: 80%;
@@ -15,8 +33,6 @@
 /****** navigation ******/
 header {
         background-color: #f7f7f7;
-        position: fixed;
-        top: 0;
         width: 100%;
 
 }
@@ -82,7 +98,6 @@ header {
         }
         .navbar {
                 flex-flow: row nowrap;
-                justify-content: space-between;
         }
         .navbar li {
                 flex: 1 1 auto;
