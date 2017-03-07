@@ -1,0 +1,20 @@
+	Restricted	Unrestricted	Total	% of total
+Central expenditure	$1.2	$0.8	$1.9	17.0%
+Ethiopia	$0.8	$2.1	$2.9	25.5%
+Tanzania	$0.7	$0.6	$1.4	12.1%
+Malawi	$0.7	$0.1	$0.8	7.0%
+Zanzibar	$0.2	$0.5	$0.7	5.7%
+Mozambique	$0.6	-	$0.6	5.0%
+Uganda	$0.4	$0.2	$0.6	4.9%
+Madagascar	-	$0.6	$0.6	4.9%
+Niger	$0.5	$0.002	$0.5	4.8%
+Rwanda	-	$0.4	$0.4	3.5%
+Yemen	$0.3	$0.02	$0.4	3.2%
+Democratic Republic of the Congo	$0.2	$0.2	$0.3	3.0%
+Côte d'Ivoire	$0.1	$0.1	$0.2	1.8%
+Burundi	$0.01	$0.1	$0.1	0.8%
+Mauritania	-	$0.1	$0.1	0.6%
+Senegal	-	$0.01	$0.01	0.1%
+Sudan	-	$0.002	$0.002	0.02%
+Nigeria	-	$0.002	$0.002	0.01%
+Total	$5.6	$5.7	$11.4	100.00%
