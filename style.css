@@ -5,6 +5,14 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
+#map {
+        width: 100%;
+        height: 600px;
+}
+#regions_div {
+        width: 100%;
+        height 500px;
+}
 body {
         font-size: 1.2em;
 }
@@ -24,7 +32,7 @@ body {
 }
 
 @media all and (min-width: 800px) {
-        nav, main {
+        nav {
                 width: 80%;
                 margin: auto;
         }

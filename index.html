@@ -5,6 +5,30 @@
     <link href="normalize.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="main.js"></script>
+       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['geochart']});
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Germany', 200],
+          ['United States', 300],
+          ['Brazil', 400],
+          ['Canada', 500],
+          ['France', 600],
+          ['RU', 700]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
   <header>
@@ -35,6 +59,11 @@
   </section>
   <section id="growth">
     <h2>growth</h2>
+    <p>"Effective altruism" came in to use around 2010.</p>
+    <p>Centre for Effective Altruism, Giving What We Can, The Life You Can Save, Bill Gates?</p>
+  </section>
+  <section>
+    <div id="regions_div"></div>
   </section>
   <section id="ideas">
     <h2>ideas</h2>
@@ -43,6 +72,9 @@
   </section>
   <section id="controversy">
     <h2>controversy</h2>
+    <p>Most people give for the warm glow.</p>
+    <p>Not systemic changes / western saviour</p>
+    <p>Treasure what you can measure - what about things which are harder to measure, but potentially very effective?</p>
   </section>
   <section id="more">
     <h2>more</h2>
@@ -58,5 +90,23 @@
   </section>
   </main>
   <footer>
+    <script>
+      function initMap() {
+        var center = {lat: 0, lng: 20};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          maxZoom: 3,
+          minZoom: 2,
+          center: center,
+          scrollwheel: false,
+          gestureHandling: "none",
+        });
+        map.fitBounds({west: -110, east: 110, north: 50, south: -40});
+      }
+    </script>
+       <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>
+
   </footer>
 </body>
