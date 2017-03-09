@@ -4,6 +4,6 @@ window.onload = function() {
   burger.onclick = function() {
     this.classList.toggle('close-icon');
     var menu = document.getElementById('navbar');
-    menu.classList.toggle('mobile-hidden');
+    menu.classList.toggle('hidden');
   }
 }

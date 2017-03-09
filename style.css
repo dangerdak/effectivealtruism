@@ -1,3 +1,4 @@
+/****** general ******/
 *,
 *:after,
 *:before {
@@ -5,21 +6,17 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
+/* Parallax bits */
 body, html, main {
+        height: 100%; /* Enables fitting to viewport height */
+}
+.parallax {
         height: 100%;
+        background-attachment: scroll; /* No parallax on mobile */
+        background-position: center;
+        background-size: cover;
 }
-.map-container {
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        z-index: -1;
-}
-#regions_div {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-}
+/**/
 section {
         height: 100%;
         width: 80%;
@@ -30,49 +27,63 @@ body {
         color: #649f94;
         font-family: 'Indie Flower', cursive;
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
         font-family: 'Rock Salt', cursive;
         color: #00342a;
 }
-.title {
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-        background: pink;
-        height: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        background-image: url('img/barley-24.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-}
-.title h1 {
-        margin: auto;
-        width: 80%;
-}
 
 @media all and (min-width: 800px) {
-        nav {
-                width: 80%;
-                margin: auto;
+        .parallax {
+                background-attachment: fixed;
         }
 }
+
 
 /****** navigation ******/
 header {
         width: 100%;
         position: fixed;
-        height: 2.13em;
-
 }
+.navbar {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        overflow: hidden;
+        transition: width 0.8s;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-right: 10%;
+}
+.hidden {
+        width: 0;
+}
+.navbar a {
+        text-decoration: none;
+        color: #415b59;
+        display: inline-block;
+        padding: 0.5em;
+        margin: 5px;
+        background-color: #fff;
+        font-family: serif;
+        font-size: 0.5em;
+}
+.navbar a:hover {
+        background-color: #faeda2
+}
+/* Burger menu bits */
 .burger {
         display: inline-block;
         cursor: pointer;
         position: absolute;
         right: 0;
         padding: 6px;
-        height: 100%;
+        height: 1.5em;
+        z-index: 1;
 }
 .bar1, .bar2, .bar3 {
         width: 35px;
@@ -81,9 +92,6 @@ header {
         border-radius: 2px;
         margin: 6px auto;
         transition: 0.4s;
-}
-.close-icon {
-        background-color: #fff
 }
 .close-icon .bar1 {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -96,59 +104,43 @@ header {
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
 }
-.navbar {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        width: 500px;
-        background: #fff;
-        overflow: hidden;
-        transition: width 0.5s;
-        position: fixed;
-        top: 0;
-        right: 47px;
-        width: 100%;
-}
-.mobile-hidden {
-        width: 0;
-}
-.navbar li {
-        text-align: right;
-}
-.navbar a {
-        text-decoration: none;
-        color: #415b59;
-        display: block;
-        padding: 0.5em 0;
-}
-.navbar a:hover {
-        background-color: #d7d7d7;
-}
+/**/
 
 @media all and (min-width: 500px) {
 }
 @media all and (min-width: 800px) {
-        /*
-        .burger {
-                display: none;
+        nav {
+                width: 80%;
+                margin: auto;
         }
-        .mobile-hidden { /* Not on mobile anymore 
-                display: flex;
-        }
-        */
         .navbar {
                 flex-flow: row nowrap;
-                justify-content: space-between;
+                justify-content: flex-end;
         }
         .navbar li {
-                flex: 1 1 auto;
+                flex: 0 1 auto;
                 margin: 0;
+        }
+        .navbar a {
+                background-color: rgba(255, 255, 255, 1.6);
         }
 
 }
+
+/****** title ******/
+.title {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        background-image: url('img/barley-24.jpg');
+}
+.title h1 {
+        margin: auto;
+        width: 80%;
+}
+
 
 /****** beginnings ******/
 .beginnings-image {
@@ -159,6 +151,18 @@ header {
         background-image: url('img/dandelion-24.jpg');
 }
 /****** ideas ******/
+.map-container {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        z-index: -1;
+}
+#regions_div {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+}
 /****** controversy ******/
 .otters-image {
         background-image: url('img/otters-24.jpg');
@@ -169,9 +173,3 @@ header {
 }
 /****** more ******/
 /****** footer ******/
-.img-big {
-        height: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-}
