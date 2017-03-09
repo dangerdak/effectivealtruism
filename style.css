@@ -23,7 +23,7 @@ section {
         margin: auto;
 }
 body {
-        font-size: 2em;
+        font-size: 1.8em;
         color: #649f94;
         font-family: 'Indie Flower', cursive;
 }
@@ -169,7 +169,7 @@ header {
 }
 .glow {
         color: #bb9d91;
-        text-shadow: 0 0 20px #ffbf00, 0 0 10px #ffbf00;
+        text-shadow: 0 0 30px #ffbf00, 0 0 20px #ffbf00, 0 0 10px #ffbf00;
 }
 /****** more ******/
 /****** footer ******/
