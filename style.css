@@ -121,9 +121,6 @@ header {
                 flex: 0 1 auto;
                 margin: 0;
         }
-        .navbar a {
-                background-color: rgba(255, 255, 255, 1.6);
-        }
 
 }
 
