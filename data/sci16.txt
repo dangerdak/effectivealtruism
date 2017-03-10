@@ -1,5 +1,4 @@
 	Restricted	Unrestricted	Total	% of total
-Central expenditure	$1.2	$0.8	$1.9	17.0%
 Ethiopia	$0.8	$2.1	$2.9	25.5%
 Tanzania	$0.7	$0.6	$1.4	12.1%
 Malawi	$0.7	$0.1	$0.8	7.0%
@@ -17,4 +16,3 @@ Mauritania	-	$0.1	$0.1	0.6%
 Senegal	-	$0.01	$0.01	0.1%
 Sudan	-	$0.002	$0.002	0.02%
 Nigeria	-	$0.002	$0.002	0.01%
-Total	$5.6	$5.7	$11.4	100.00%

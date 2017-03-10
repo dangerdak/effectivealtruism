@@ -1,0 +1,18 @@
+DtW - from GiveWell's analysis of Deworm the World financials. Sheet: 2014 - 2016 expenses. Figures include central costs - this is DtW's full budget.
+http://www.givewell.org/charities/deworm-world-initiative#footnote43_xrpn0pm
+
+
+SCI - (2014 and 2015) from GiveWell's 2015 review of SCI, based on SCI's financial statements 2013/2014 and 2014/2015
+http://www.givewell.org/international/top-charities/schistosomiasis-control-initiative/2015-review-updated-April-2016#BreakdownofSCIsspending
+
+
+AMF - https://www.againstmalaria.com/Distributions.aspx for number of nets distributed.
+Cost per net estimates from Givewell http://www.givewell.org/charities/against-malaria-foundation#CostperLLINdistributed
+ $4.35 in malawi, $5.92 drc
+
+Givewells cost-effectiveness analysis:
+Cost/equivalent life saved 2015
+bednets: 1981
+dtw 2165
+sci 3647
+http://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models

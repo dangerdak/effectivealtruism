@@ -1,0 +1,14 @@
+, 0
+Burundi, 690000
+Côte d'Ivoire, 600000
+Ethiopia, 1150000
+Malawi, 370000
+Mauritania, 60000
+Mozambique, 50000
+Niger, 300000
+Rwanda, 80000
+Tanzania, 650000
+Uganda, 380000
+Yemen, 130000
+Zanzibar, 280000
+Zimbabwe, 70000

@@ -1,37 +1,7 @@
- 	Country	Distributions	# LLINs
-Angola	3	10,450 
-Botswana	2	3,000 
-Faso	Burkina Faso	12	47,250 
-Burundi	13	40,000 
-Cambodia	3	10,000 
-Cameroon	34	42,200 
-Democratic Republic of the Congo	23	1,346,000 
-Ethiopia	13	16,600 
-Gabon	1	800 
-Gambia	18	22,850 
-Ghana	63	2,730,400 
-Haiti	8	28,000 
-India	12	27,200 
-Indonesia	4	22,500 
-Kenya	26	37,400 
-Liberia	12	19,500 
-Madagascar	2	11,000 
-Malawi	121	3,345,720 
-Mali	5	25,750 
-Namibia	6	12,600 
-Nepal	10	10,000 
-Nicaragua	4	3,500 
-Nigeria	5	20,000 
-New Guinea	Papua New Guinea	12	1,179,400 
-Peru	1	2,000 
-Rwanda	2	2,000 
-Tome and Principe	Sao Tome and Principe	3	6,000 
-Senegal	47	78,750 
-Leone	Sierra Leone	19	54,560 
-Sudan	11	25,000 
-Tanzania	53	131,943 
-Togo	32	2,417,250 
-Uganda	128	10,794,390 
-Zambia	42	332,660 
-Zimbabwe	3	3,150 
-Totals	753	* 22,859,823
+705468	2015 Equatéur	Congo (Dem. Rep.)	Congo (Dem. Rep.)	Oct 15-Mar 16	Logo	IMA World Health/DFID	status	Photos expected	Videos expected	
+335000	2015	Malawi	Malawi	Oct-Dec 15	Logo	Concern Universal	status	Photos expected	Videos expected	
+235000	2015	Malawi	Malawi	Nov-Dec 15	Logo	Concern Universal	status	Photos expected	Videos expected	
+396900	2015	Malawi	Malawi	Mar-May 15	Logo	Concern Universal	status	Photos expected	Videos expected	
+80000	2015	Malawi	Malawi	Feb-Mar 15	Logo	Concern Universal	status	Photos expected	Videos expected	
+630532	2014	Congo (Dem. Rep.)	Congo (Dem. Rep.)	Aug-Nov 14	Logo	IMA World Health/DFID	status	Photos	Videos	
+290770	2014	Malawi	Malawi	Sep-Oct 14	Logo	Concern Universal	status	Photos expected	Videos expected	

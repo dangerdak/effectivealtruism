@@ -1,0 +1,16 @@
+, 0
+Burundi, 200000
+Côte d'Ivoire, 1070000
+Democratic Republic of the Congo, 340000
+Ethiopia, 1220000
+Liberia, 70000
+Madagascar, 90000
+Malawi, 520000
+Mozambique, 1250000
+Niger, 10000
+Rwanda, 340000
+Sudan, 370000
+Tanzania, 20000
+Uganda, 100000
+Yemen, 130000
+Zanzibar, 250000
