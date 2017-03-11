@@ -13,7 +13,7 @@ body, html, main {
 }
 .parallax {
         height: 100%;
-        background-attachment: scroll; /* No parallax on mobile */
+        background-attachment: fixed; /* No parallax on mobile */
         background-position: center;
         background-size: cover;
 }
@@ -60,39 +60,45 @@ h1, h2 {
 a {
         color: #245db1;
 }
-.key-term {
+.tooltip {
+        position: relative;
+        display: inline-block;
         font-size: 1.1em;
         color: #ffac1f;
 }
-.term-info {
-        z-index: 1;
-        display: block;
-        margin: auto;
+.tooltip-text {
+        visibility: hidden;
+        width: 340px;
+        top: 100%;
+        left: 50%;
+        margin-left: -170px;
         background-color: #fff;
         border: 2px solid #ffac1f;
-        padding: 5px;
-        max-width: 50%;
+        border-radius: 6px;
+        color: #ffac1f;
+        padding: 10px;
         font-family: serif;
         font-size: 0.5em;
-        color: #ffac1f;
+
+        position: absolute;
+        z-index: 1;
+}
+.tooltip-text::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #ffac1f transparent;
+}
+.tooltip:hover .tooltip-text {
+        visibility: visible;
 }
 
 @media all and (min-width: 800px) {
         .parallax {
                 background-attachment: fixed;
-        }
-        .key-term {
-                position: relative;
-        }
-        .term-info {
-                display: none;
-                margin: auto;
-                max-width: 30%;
-                position: absolute;
-                right: 10%;
-        }
-        .key-term:hover + .term-info {
-                display: block;
         }
 }
 
