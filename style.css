@@ -194,9 +194,12 @@ header {
 }
 /****** movement ******/
 .movement-image {
-        background-image: url('img/dandelion-24.jpg');
+        background-image: url('img/clouds-24.jpg');
 }
 /****** ideas ******/
+.ideas-image {
+        background-image: url('img/dandelion-24.jpg');
+}
 .map-container {
         height: 100%;
         overflow: hidden;
@@ -210,12 +213,12 @@ header {
         bottom: 0;
 }
 /****** controversy ******/
-.otters-image {
-        background-image: url('img/otters-24.jpg');
-}
 .glow {
         color: #bb9d91;
         text-shadow: 0 0 30px #ffbf00, 0 0 20px #ffbf00, 0 0 10px #ffbf00;
 }
 /****** more ******/
+.more-image {
+        background-image: url('img/rocks-24.jpg');
+}
 /****** footer ******/
