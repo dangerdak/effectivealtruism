@@ -195,7 +195,7 @@ header {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
-        background-image: url('img/barley-24.jpg');
+        background-image: url('https://c2.staticflickr.com/4/3802/32541152464_37307ebe60_o.jpg');
 }
 .title h1 {
         margin: auto;
@@ -205,15 +205,15 @@ header {
 
 /****** growth ******/
 .growth-image {
-        background-image: url('img/mind-the-gap-24.jpg');
+        background-image: url('https://c1.staticflickr.com/1/614/33256155381_92ab35d422_o.jpg');
 }
 /****** movement ******/
 .movement-image {
-        background-image: url('img/clouds-24.jpg');
+        background-image: url('https://c1.staticflickr.com/1/696/32541142524_2696d1b51b_o.jpg');
 }
 /****** ideas ******/
 .ideas-image {
-        background-image: url('img/dandelion-24.jpg');
+        background-image: url('https://c1.staticflickr.com/1/579/32569631963_bc9202d90e_o.jpg');
 }
 .map-container {
         height: 100%;
@@ -234,7 +234,7 @@ header {
 }
 /****** more ******/
 .more-image {
-        background-image: url('img/rocks-24.jpg');
+        background-image: url('https://c1.staticflickr.com/3/2823/33383921665_95dba301b7_b.jpg');
 }
 /****** footer ******/
 footer {
