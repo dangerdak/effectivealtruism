@@ -7,17 +7,6 @@
         box-sizing: border-box;
 }
 /* trying out */
-.info {
-        font-size: 1.1em;
-        color: green;
-}
-.chart-container {
-}
-.text {
-        width: 80%;
-        margin: auto;
-}
-
 /* Parallax bits */
 body, html, main {
         height: 100%; /* Enables fitting to viewport height */
@@ -34,6 +23,11 @@ section {
         width: 90%;
         margin: auto;
 }
+.text {
+        width: 80%;
+        margin: auto;
+}
+
 body {
         font-size: 1.8em;
         color: #649f94;
@@ -43,10 +37,46 @@ h1, h2, h3, h4, h5, h6 {
         font-family: 'Rock Salt', cursive;
         color: #00342a;
 }
+blockquote {
+        color: #f9c19c;
+        font-style: italic;
+}
+a {
+        color: #245db1;
+}
+.key-term {
+        font-size: 1.1em;
+        color: #ffac1f;
+        display: inline;
+}
+.term-info {
+        display: block;
+        margin: auto;
+        background-color: #fff;
+        border: 2px solid #ffac1f;
+        padding: 5px;
+        max-width: 50%;
+        font-family: serif;
+        font-size: 0.5em;
+        color: #ffac1f;
+}
 
 @media all and (min-width: 800px) {
         .parallax {
                 background-attachment: fixed;
+        }
+        .key-term {
+                display: inline-block;
+                position: relative;
+        }
+        .term-info {
+                display: none;
+                margin: auto;
+                max-width: 30%;
+                float: right;
+        }
+        .key-term:hover ~ .term-info {
+                display: block;
         }
 }
 

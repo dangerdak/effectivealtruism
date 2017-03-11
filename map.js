@@ -44,28 +44,28 @@ function drawRegionsMap() {
       function drawChart() {
         var rows = [
           [1869,  1, 'Charity Organisation Societies begin in England'],
-          [1941,  1, 'Foundation Center is founded'],
-          [1956,  1, ''],
+          [1941,  1, 'Form 990 enters use'],
+          [1956,  1, 'Foundation Center is founded'],
           [1966,  1, 'Hewlett Foundation established'],
           [1982,  1, 'The National Center for Charitable Statistic (NCCS) launches'],
-          [1987,  1, ''],
-          [1988,  1, ''],
+          [1987,  1, 'The NonProfit Times is launched'],
+          [1988,  1, 'The Chronicle of Philanthropy is founded'],
           [1992,  1, 'CharityWatch is founded'],
-          [1994,  1, ''],
+          [1994,  1, 'GuideStar'],
           [1999,  1, 'McKinsey sets up a non-profit branch focused on global health, aid and development'],
-          [2000,  1, ''],
-          [2001,  1, 'Charity Navigator launched. Centre for Effective Philanthropy is founded'],
-          [2002,  1, ''],
-          [2003,  1, ''],
+          [2000,  1, 'The Bridgespan Group, Faunalytics, FGS, Ministry Watch'],
+          [2001,  1, 'Charity Navigator, Centre for Effective Philanthropy, BBB Wise Giving Alliance'],
+          [2002,  1, 'New Philanthropy Capital'],
+          [2003,  1, 'Stanford Social Innovation Review, the Redstone Strategy Group'],
           [2005,  1, 'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
-          [2006,  1, ''],
-          [2007,  1, 'GiveWell launches. Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
-          [2008,  1, ''],
-          [2010,  1, ''],
+          [2006,  1, 'Nonprofit Marketplace Initiative, Center for High Impact Philanthropy'],
+          [2007,  1, 'GreatNonProfits. GiveWell launches: Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
+          [2008,  1, 'Philanthropedia as Nonprofit Knowledge Network, the International Aid Transparency Initiative'],
+          [2010,  1, 'Jumo, Charity Navigator revamp (CN 2.0)'],
           [2011,  1, 'Open Philanthropy Project'],
           [2012,  1, 'Animal Charity Evaluators, focused on effective ways to help animals'],
-          [2013,  1, ''],
-          [2015,  1, '']
+          [2013,  1, 'Inside Philanthropy'],
+          [2015,  1, 'ImpactMatters']
         ];
         var evalData = new google.visualization.DataTable();
         evalData.addColumn('number', 'Year');
@@ -77,7 +77,20 @@ function drawRegionsMap() {
        );
 
         var options = {
+          colors: ['#245db1', '#f9c19c'],
+          lineWidth: 1,
           title: 'Timeline of Charity Evaluators',
+          titleTextStyle: {
+            color: '#649f94',
+            fontName: 'Rock Salt',
+            fontSize: 20,
+          },
+          tooltip: {
+            textStyle: {
+              fontName: 'serif',
+              color: '#ffac1f',
+            },
+          },
           pointSize: 15,
           height: 200,
           legend: {
@@ -96,6 +109,12 @@ function drawRegionsMap() {
             format: '',
             gridlines: {
               color: '#fff',
+            },
+            titleTextStyle: {
+              color: '#649f94',
+            },
+            textStyle: {
+              color: '#649f94',
             },
           },
           animation: {

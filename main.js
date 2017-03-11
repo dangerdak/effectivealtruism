@@ -6,4 +6,6 @@ window.onload = function() {
     var menu = document.getElementById('navbar');
     menu.classList.toggle('hidden');
   }
+
+  // Show info about key terms
 }
