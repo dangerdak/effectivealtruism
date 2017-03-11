@@ -22,6 +22,7 @@ section {
         min-height: 100%;
         width: 90%;
         margin: auto;
+        padding-bottom: 1em;
 }
 .text {
         width: 80%;
@@ -31,8 +32,14 @@ section {
         font-family: serif;
         font-size: 0.5em;
         display: block;
-        position: relative;
+        position: absolute;
+        width: 100%;
+        right: 5%;
         text-align: right;
+        z-index: 1;
+}
+.ref a {
+        padding-left: 0.1em;
 }
 
 body {
@@ -42,9 +49,11 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
         font-family: 'Rock Salt', cursive;
+}
+h1, h2 {
         color: #00342a;
 }
-blockquote {
+.quote {
         color: #f9c19c;
         font-style: italic;
 }
@@ -54,9 +63,9 @@ a {
 .key-term {
         font-size: 1.1em;
         color: #ffac1f;
-        display: inline;
 }
 .term-info {
+        z-index: 1;
         display: block;
         margin: auto;
         background-color: #fff;
@@ -73,16 +82,16 @@ a {
                 background-attachment: fixed;
         }
         .key-term {
-                display: inline-block;
                 position: relative;
         }
         .term-info {
                 display: none;
                 margin: auto;
                 max-width: 30%;
-                float: right;
+                position: absolute;
+                right: 10%;
         }
-        .key-term:hover ~ .term-info {
+        .key-term:hover + .term-info {
                 display: block;
         }
 }
@@ -222,3 +231,19 @@ header {
         background-image: url('img/rocks-24.jpg');
 }
 /****** footer ******/
+footer {
+        background-color: #f7f7f7;
+        font-size: 12px;
+        font-family: serif;
+        padding: 10px;
+}
+.sources {
+        font-family: serif;
+        width: 50%;
+}
+.sources ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+}
+
