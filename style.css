@@ -27,6 +27,13 @@ section {
         width: 80%;
         margin: auto;
 }
+.ref {
+        font-family: serif;
+        font-size: 0.5em;
+        display: block;
+        position: relative;
+        text-align: right;
+}
 
 body {
         font-size: 1.8em;
