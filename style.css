@@ -181,12 +181,12 @@ header {
 }
 
 
-/****** beginnings ******/
-.beginnings-image {
-        background-image: url('img/mind-the-gap-24.jpg');
-}
 /****** growth ******/
 .growth-image {
+        background-image: url('img/mind-the-gap-24.jpg');
+}
+/****** movement ******/
+.movement-image {
         background-image: url('img/dandelion-24.jpg');
 }
 /****** ideas ******/
