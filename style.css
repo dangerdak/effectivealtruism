@@ -6,6 +6,18 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
+/* trying out */
+.info {
+        font-size: 1.1em;
+        color: green;
+}
+.chart-container {
+}
+.text {
+        width: 80%;
+        margin: auto;
+}
+
 /* Parallax bits */
 body, html, main {
         height: 100%; /* Enables fitting to viewport height */
@@ -18,8 +30,8 @@ body, html, main {
 }
 /**/
 section {
-        height: 100%;
-        width: 80%;
+        min-height: 100%;
+        width: 90%;
         margin: auto;
 }
 body {
