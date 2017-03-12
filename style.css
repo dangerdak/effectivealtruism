@@ -267,6 +267,17 @@ header {
 .more-image {
         background-image: url('img/rocks-24.jpg');
 }
+.top-button {
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        color: #00342a;
+        padding: 6px;
+        font-size: 0.5em;
+        font-family: serif;
+        text-align: center;
+}
 /****** footer ******/
 footer {
         background-color: #f7f7f7;
