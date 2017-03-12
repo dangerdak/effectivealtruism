@@ -17,24 +17,27 @@ window.onload = function() {
     var iconMany = document.getElementById('icon-many');
     var iconScience = document.getElementById('icon-science');
     var iconHeart = document.getElementById('icon-heart');
-    if (inSectionById('ideas')) {
+    if (inSectionById('ideas', 150)) {
       iconSingle.classList.add('reveal', 'reveal-left');
       iconMany.classList.add('reveal', 'reveal-right');
     }
-    else if (inSectionById('intro')) {
+    else if (inSectionById('intro', 400)) {
       iconScience.classList.add('reveal', 'reveal-left');
       iconHeart.classList.add('reveal', 'reveal-right');
+      setTimeout(function() {
+        iconHeart.style.color = '#f9c19c';
+        iconScience.style.color = '#f9c19c';
+      }, 1000);
     }
   }
 
   // Checks if top of viewport is in section given by id
-  function inSectionById(id) {
+  function inSectionById(id, buffer) {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var section = document.getElementById(id);
     var sectionTop = findPos(section);
     var nextSectionTop = findPos(section.nextElementSibling);
-    var buffer = 20;
-    return scrollTop > sectionTop - buffer && scrollTop < nextSectionTop;
+    return (scrollTop > sectionTop - buffer) && (scrollTop < nextSectionTop);
   }
   // from http://stackoverflow.com/a/8918062/3652070 
   function scrollTo(id, duration) {

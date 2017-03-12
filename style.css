@@ -66,6 +66,7 @@ a {
         display: inline-block;
         font-size: 1.1em;
         color: #ffac1f;
+        border-bottom: 2px dotted;
 }
 .tooltip-text {
         visibility: hidden;
@@ -110,6 +111,7 @@ header {
         position: fixed;
 }
 .navbar {
+        z-index: 1;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-end;
@@ -195,6 +197,10 @@ header {
         align-items: center;
         overflow: hidden;
 }
+.icon-graphic span {
+        z-index: -1;
+
+}
 
 /****** title ******/
 .title {
@@ -223,7 +229,9 @@ header {
         position: relative;
         right: -100%;
 }
-
+.intro-image {
+        background-image: url('img/mind-the-gap-24.jpg');
+}
 
 /****** growth ******/
 .growth-image {
@@ -255,7 +263,7 @@ header {
         right: -100%;
 }
 .reveal {
-        transition: all 1s ease;
+        transition: right 1s, left 1s ease;
 }
 .reveal-left {
         left: 0;
