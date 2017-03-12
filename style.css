@@ -222,16 +222,29 @@ header {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
 }
 .icon-single {
         width: 10%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        position: relative;
+        left: -10%;
 }
-.icons-many {
+.icon-many {
         max-width: 100%;
         flex: 0 1 auto;
+        position: relative;
+        right: -100%;
+}
+.reveal-from-left {
+        left: 0;
+        transition: all 1s ease;
+}
+.reveal-from-right {
+        right: 0;
+        transition: all 1s ease;
 }
 .map-container {
         height: 100%;

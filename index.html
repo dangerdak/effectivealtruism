@@ -28,7 +28,7 @@
     </nav>
   </header>
   <main>
-  <section class="title parallax">
+  <section class="title parallax" id="title">
     <h1>An overview of effective altruism</h1>
   </section>
   <section id="growth">
@@ -64,12 +64,14 @@
       <h3>More for your money</h3>
         <p><div class="tooltip">80% of all blindness is preventable<span class="tooltip-text">That's 31 million people, 90% of whom live in the developing world</span></div>. In the UK it costs about £50,000 to train and support a guide dog. In developing countries <div class="tooltip">cataract<span class="tooltip-text">In low-income countries unoperated cataracts are the leading cause of blindless</span></div> surgery costs £30.</p>
       <p>That's over 1500 people saved from blindness for the price of 1 guide dog.</p>
-      <div class="icon-graphic">
-        <div class="icon-single">
-        <span class="ion-man"></span>
-        <span class="ion-arrow-right-c arrow"></span>
+      <div class="icon-graphic" id="icon-graphic">
+        <div class="icon-single" id="icon-single">
+          <span class="ion-man"></span>
+          <span class="ion-arrow-right-c arrow"></span>
         </div>
-        <img src="img/info.jpg" class="icons-many">
+        <div class="icon-many" id="icon-many">
+          <img src="img/info.jpg">
+        </div>
       </div>
       <p>We should care equally for those on the other side of the world.</p>
       <p>Use empirical methods to work out how to do the most good we possibly can. (http://www.vox.com/2015/4/24/8457895/givewell-open-philanthropy-charity)</p>
@@ -100,7 +102,8 @@
       data-height="500">
         #effectivealtruism Tweets
     </a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="top-button" id="top-button">Top</div>
 
   </section>
   <footer>
