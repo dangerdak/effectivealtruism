@@ -7,5 +7,4 @@ window.onload = function() {
     menu.classList.toggle('hidden');
   }
 
-  // Show info about key terms
 }

@@ -7,6 +7,7 @@
         box-sizing: border-box;
 }
 /* trying out */
+
 /* Parallax bits */
 body, html, main {
         height: 100%; /* Enables fitting to viewport height */
@@ -214,6 +215,23 @@ header {
 /****** ideas ******/
 .ideas-image {
         background-image: url('img/dandelion-24.jpg');
+}
+.icon-graphic {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+}
+.icon-single {
+        width: 10%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+}
+.icons-many {
+        max-width: 100%;
+        flex: 0 1 auto;
 }
 .map-container {
         height: 100%;
