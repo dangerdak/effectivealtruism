@@ -15,9 +15,15 @@ window.onload = function() {
   window.onscroll = function() {
     var iconSingle = document.getElementById('icon-single');
     var iconMany = document.getElementById('icon-many');
+    var iconScience = document.getElementById('icon-science');
+    var iconHeart = document.getElementById('icon-heart');
     if (inSectionById('ideas')) {
-      iconSingle.classList.add('reveal-from-left');
-      iconMany.classList.add('reveal-from-right');
+      iconSingle.classList.add('reveal', 'reveal-left');
+      iconMany.classList.add('reveal', 'reveal-right');
+    }
+    else if (inSectionById('intro')) {
+      iconScience.classList.add('reveal', 'reveal-left');
+      iconHeart.classList.add('reveal', 'reveal-right');
     }
   }
 
@@ -27,7 +33,8 @@ window.onload = function() {
     var section = document.getElementById(id);
     var sectionTop = findPos(section);
     var nextSectionTop = findPos(section.nextElementSibling);
-    return scrollTop > sectionTop && scrollTop < nextSectionTop;
+    var buffer = 20;
+    return scrollTop > sectionTop - buffer && scrollTop < nextSectionTop;
   }
   // from http://stackoverflow.com/a/8918062/3652070 
   function scrollTo(id, duration) {
