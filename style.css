@@ -7,6 +7,7 @@
         box-sizing: border-box;
 }
 /* trying out */
+
 /* Parallax bits */
 body, html, main {
         height: 100%; /* Enables fitting to viewport height */
@@ -65,6 +66,7 @@ a {
         display: inline-block;
         font-size: 1.1em;
         color: #ffac1f;
+        border-bottom: 2px dotted;
 }
 .tooltip-text {
         visibility: hidden;
@@ -109,6 +111,7 @@ header {
         position: fixed;
 }
 .navbar {
+        z-index: 1;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-end;
@@ -187,6 +190,17 @@ header {
         }
 
 }
+.icon-graphic {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        overflow: hidden;
+}
+.icon-graphic span {
+        z-index: -1;
+
+}
 
 /****** title ******/
 .title {
@@ -202,6 +216,22 @@ header {
         width: 80%;
 }
 
+/****** intro ******/
+.graphic-intro {
+        justify-content: center;
+        font-size: 10em;
+}
+.icon-science {
+        position: relative;
+        left: -100%;
+}
+.icon-heart {
+        position: relative;
+        right: -100%;
+}
+.intro-image {
+        background-image: url('img/mind-the-gap-24.jpg');
+}
 
 /****** growth ******/
 .growth-image {
@@ -214,6 +244,23 @@ header {
 /****** ideas ******/
 .ideas-image {
         background-image: url('https://c1.staticflickr.com/1/579/32569631963_bc9202d90e_o.jpg');
+}
+.graphic-blindness {
+        justify-content: space-between;
+}
+.icon-single {
+        width: 10%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        position: relative;
+        left: -10%;
+}
+.icon-many {
+        max-width: 100%;
+        flex: 0 1 auto;
+        position: relative;
+        right: -100%;
 }
 .map-container {
         height: 100%;
@@ -228,13 +275,30 @@ header {
         bottom: 0;
 }
 /****** controversy ******/
-.glow {
-        color: #bb9d91;
-        text-shadow: 0 0 30px #ffbf00, 0 0 20px #ffbf00, 0 0 10px #ffbf00;
-}
 /****** more ******/
 .more-image {
         background-image: url('https://c1.staticflickr.com/3/2823/33383921665_95dba301b7_b.jpg');
+}
+.top-button {
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        color: #00342a;
+        padding: 6px;
+        font-size: 0.5em;
+        font-family: serif;
+        text-align: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 1s ease;
+}
+.top-icon {
+        display: block;
+        width: 100%;
+        font-size: 1.8em;
+        bottom: -5px;
+        position: relative;
 }
 /****** footer ******/
 footer {
@@ -253,3 +317,13 @@ footer {
         padding: 0;
 }
 
+.reveal {
+        transition: opacity 1s, right 1s, left 1s ease;
+        opacity: 1;
+}
+.reveal-left {
+        left: 0;
+}
+.reveal-right {
+        right: 0;
+}
