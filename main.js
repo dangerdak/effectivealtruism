@@ -12,22 +12,34 @@ window.onload = function() {
   topButton.addEventListener('click', function() {
     scrollTo('title', 500);
   });
+  // scrolling navbar
+  var navButtons = document.querySelectorAll('.navbar a');
+  navButtons.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      var section = e.target.getAttribute('href').slice(1);
+      scrollTo(section, 400);
+      e.preventDefault();
+    });
+  });
   window.onscroll = function() {
     var iconSingle = document.getElementById('icon-single');
     var iconMany = document.getElementById('icon-many');
     var iconScience = document.getElementById('icon-science');
     var iconHeart = document.getElementById('icon-heart');
     var topButton = document.getElementById('top-button');
+    // scrolling back to top button
     if (!inSectionById('title', 10)) {
       topButton.classList.add('reveal');
     }
     else {
       topButton.classList.remove('reveal', 'reveal-right');
     }
+    // blindness animation
     if (inSectionById('ideas', -300)) {
       iconSingle.classList.add('reveal', 'reveal-left');
       iconMany.classList.add('reveal', 'reveal-right');
     }
+    // intro animation
     else if (inSectionById('intro', 300)) {
       iconScience.classList.add('reveal', 'reveal-left');
       iconHeart.classList.add('reveal', 'reveal-right');
