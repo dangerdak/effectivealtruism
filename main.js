@@ -17,11 +17,18 @@ window.onload = function() {
     var iconMany = document.getElementById('icon-many');
     var iconScience = document.getElementById('icon-science');
     var iconHeart = document.getElementById('icon-heart');
-    if (inSectionById('ideas', 150)) {
+    var topButton = document.getElementById('top-button');
+    if (!inSectionById('title', 10)) {
+      topButton.classList.add('reveal', 'reveal-right');
+    }
+    else {
+      topButton.classList.remove('reveal', 'reveal-right');
+    }
+    if (inSectionById('ideas', -300)) {
       iconSingle.classList.add('reveal', 'reveal-left');
       iconMany.classList.add('reveal', 'reveal-right');
     }
-    else if (inSectionById('intro', 400)) {
+    else if (inSectionById('intro', 300)) {
       iconScience.classList.add('reveal', 'reveal-left');
       iconHeart.classList.add('reveal', 'reveal-right');
       setTimeout(function() {
