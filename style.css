@@ -262,15 +262,6 @@ header {
         position: relative;
         right: -100%;
 }
-.reveal {
-        transition: right 1s, left 1s ease;
-}
-.reveal-left {
-        left: 0;
-}
-.reveal-right {
-        right: 0;
-}
 .map-container {
         height: 100%;
         overflow: hidden;
@@ -284,10 +275,6 @@ header {
         bottom: 0;
 }
 /****** controversy ******/
-.glow {
-        color: #bb9d91;
-        text-shadow: 0 0 30px #ffbf00, 0 0 20px #ffbf00, 0 0 10px #ffbf00;
-}
 /****** more ******/
 .more-image {
         background-image: url('img/rocks-24.jpg');
@@ -303,6 +290,15 @@ header {
         font-family: serif;
         text-align: center;
         cursor: pointer;
+        opacity: 0;
+        transition: opacity 1s ease;
+}
+.top-icon {
+        display: block;
+        width: 100%;
+        font-size: 1.8em;
+        bottom: -5px;
+        position: relative;
 }
 /****** footer ******/
 footer {
@@ -321,3 +317,13 @@ footer {
         padding: 0;
 }
 
+.reveal {
+        transition: opacity 1s, right 1s, left 1s ease;
+        opacity: 1;
+}
+.reveal-left {
+        left: 0;
+}
+.reveal-right {
+        right: 0;
+}
