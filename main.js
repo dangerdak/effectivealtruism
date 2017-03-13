@@ -19,7 +19,7 @@ window.onload = function() {
     var iconHeart = document.getElementById('icon-heart');
     var topButton = document.getElementById('top-button');
     if (!inSectionById('title', 10)) {
-      topButton.classList.add('reveal', 'reveal-right');
+      topButton.classList.add('reveal');
     }
     else {
       topButton.classList.remove('reveal', 'reveal-right');
