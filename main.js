@@ -1,4 +1,25 @@
 window.onload = function() {
+  // Determine browser-specific transition end event
+  // From modernizr & https://davidwalsh.name/css-animation-callback
+  function whichTransitionEvent(){
+      var t;
+      var el = document.createElement('fakeelement');
+      var transitions = {
+        'transition':'transitionend',
+        'OTransition':'oTransitionEnd',
+        'MozTransition':'transitionend',
+        'WebkitTransition':'webkitTransitionEnd'
+      }
+
+      for(t in transitions){
+          if( el.style[t] !== undefined ){
+              return transitions[t];
+          }
+      }
+  }
+  // Listen for a transition
+  var transitionEndEvent = whichTransitionEvent();
+
   // Toggle menu
   var burger = document.getElementById("burger");
   burger.onclick = function() {
@@ -21,32 +42,43 @@ window.onload = function() {
       e.preventDefault();
     });
   });
+  var iconScience = document.getElementById('icon-science');
+  var iconHeart = document.getElementById('icon-heart');
+  var introIcons = [iconScience, iconHeart];
+  introIcons.forEach(function(icon) {
+    icon.addEventListener(transitionEndEvent, function(e) {
+      e.target.style.color = '#f9c19c';
+    });
+  });
   window.onscroll = function() {
     var iconSingle = document.getElementById('icon-single');
     var iconMany = document.getElementById('icon-many');
-    var iconScience = document.getElementById('icon-science');
-    var iconHeart = document.getElementById('icon-heart');
-    var topButton = document.getElementById('top-button');
     // scrolling back to top button
     if (!inSectionById('title', 10)) {
       topButton.classList.add('reveal');
     }
     else {
-      topButton.classList.remove('reveal', 'reveal-right');
+      topButton.classList.remove('reveal');
     }
     // blindness animation
     if (inSectionById('ideas', -300)) {
       iconSingle.classList.add('reveal', 'reveal-left');
       iconMany.classList.add('reveal', 'reveal-right');
     }
+    else {
+      iconSingle.classList.remove('reveal', 'reveal-left');
+      iconMany.classList.remove('reveal', 'reveal-right');
+    }
     // intro animation
-    else if (inSectionById('intro', 300)) {
+    if (inSectionById('intro', 300)) {
       iconScience.classList.add('reveal', 'reveal-left');
       iconHeart.classList.add('reveal', 'reveal-right');
-      setTimeout(function() {
-        iconHeart.style.color = '#f9c19c';
-        iconScience.style.color = '#f9c19c';
-      }, 1000);
+    }
+    else {
+      iconHeart.style.color = '#649f94';
+      iconScience.style.color = '#649f94';
+      iconScience.classList.remove('reveal', 'reveal-left');
+      iconHeart.classList.remove('reveal', 'reveal-right');
     }
   }
 
