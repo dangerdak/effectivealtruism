@@ -19,15 +19,28 @@ body, html, main {
         background-size: cover;
 }
 /**/
+body {
+        font-size: 1.6em;
+        color: #649f94;
+        font-family: 'Indie Flower', cursive;
+}
+h1, h2, h3, h4, h5, h6 {
+        font-family: 'Rock Salt', cursive;
+}
+h1, h2 {
+        color: #00342a;
+}
+h1, h2 {
+        font-size: 2.5em;
+}
 section {
         min-height: 100%;
-        width: 90%;
+        width: 80%;
         margin: auto;
         padding-bottom: 1em;
 }
 .text {
-        width: 80%;
-        margin: auto;
+        line-height: 1.6em;
 }
 .ref {
         font-family: serif;
@@ -43,28 +56,18 @@ section {
         padding-left: 0.1em;
 }
 
-body {
-        font-size: 1.8em;
-        color: #649f94;
-        font-family: 'Indie Flower', cursive;
-}
-h1, h2, h3, h4, h5, h6 {
-        font-family: 'Rock Salt', cursive;
-}
-h1, h2 {
-        color: #00342a;
-}
 .quote {
         color: #f9c19c;
         font-style: italic;
 }
 a {
         color: #245db1;
+        text-decoration: none;
 }
 .tooltip {
         position: relative;
         display: inline-block;
-        font-size: 1.1em;
+        font-size: 1.2em;
         color: #ffac1f;
         border-bottom: 2px dotted;
 }
@@ -81,7 +84,7 @@ a {
         padding: 10px;
         font-family: serif;
         font-size: 0.5em;
-
+        line-height: 1.2em;
         position: absolute;
         z-index: 1;
 }
