@@ -40,6 +40,11 @@ section {
         padding-bottom: 1em;
         z-index: -1;
 }
+a {
+        color: #245db1;
+        text-decoration: none;
+        font-size: 1.2em;
+}
 .text {
         line-height: 1.6em;
 }
@@ -55,10 +60,6 @@ section {
 .quote {
         color: #f9c19c;
         font-style: italic;
-}
-a {
-        color: #245db1;
-        text-decoration: none;
 }
 .tooltip {
         position: relative;
