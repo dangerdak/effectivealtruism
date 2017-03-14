@@ -77,7 +77,7 @@ function drawRegionsMap() {
        );
 
         var options = {
-          colors: ['#245db1', '#f9c19c'],
+          colors: ['#649f94', '#245db1', '#f9c19c'],
           lineWidth: 1,
           title: 'Timeline of Charity Evaluators',
           titleTextStyle: {

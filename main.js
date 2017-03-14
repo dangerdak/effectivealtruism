@@ -29,6 +29,7 @@ window.onload = function() {
   }
 
   // Scroll effects 
+  // scrolling back to top button
   var topButton = document.getElementById('top-button');
   topButton.addEventListener('click', function() {
     scrollTo('title', 500);
@@ -53,7 +54,7 @@ window.onload = function() {
   window.onscroll = function() {
     var iconSingle = document.getElementById('icon-single');
     var iconMany = document.getElementById('icon-many');
-    // scrolling back to top button
+    // Hide/reveal back to top button
     if (!inSectionById('title', 10)) {
       topButton.classList.add('reveal');
     }
