@@ -277,6 +277,25 @@ header {
 .more-image {
         background-image: url('https://c1.staticflickr.com/3/2823/33383921665_95dba301b7_b.jpg');
 }
+.more {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+}
+.more h2 {
+        width: 100%;
+}
+.more h3 {
+        padding: 0;
+        margin: 0;
+}
+.more ul {
+        list-style-type: none;
+        padding: 0;
+}
+.links, .twitter {
+        width: 40%;
+}
 .top-button {
         display: block;
         position: fixed;
