@@ -46,11 +46,7 @@ section {
 .ref {
         font-family: serif;
         font-size: 0.5em;
-        display: block;
-        position: absolute;
-        width: 100%;
-        right: 5%;
-        text-align: right;
+        vertical-align: super;
 }
 .ref a {
         padding-left: 0.1em;
