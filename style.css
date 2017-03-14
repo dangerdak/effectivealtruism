@@ -122,25 +122,24 @@ header {
         margin: 0;
         list-style-type: none;
         overflow: hidden;
-        transition: width 0.8s;
+        transition: right 1s;
         position: fixed;
         top: 0;
         right: 0;
-        width: 100%;
         margin-right: 10%;
 }
 .hidden {
-        width: 0;
+        right: -100%;
 }
 .navbar a {
         text-decoration: none;
         color: #415b59;
         display: inline-block;
-        padding: 0.5em;
+        padding: 7.5px;
         margin: 5px;
         background-color: #fff;
         font-family: serif;
-        font-size: 0.5em;
+        font-size: 15px;
 }
 .navbar a:hover {
         background-color: #faeda2
@@ -152,7 +151,8 @@ header {
         position: absolute;
         right: 0;
         padding: 6px;
-        height: 1.5em;
+        margin: 5px;
+        height: 36.5px;
         z-index: 1;
 }
 .bar1, .bar2, .bar3 {
@@ -162,6 +162,9 @@ header {
         border-radius: 2px;
         margin: 6px auto;
         transition: 0.4s;
+}
+.bar1 {
+        margin-top: 0;
 }
 .close-icon .bar1 {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
