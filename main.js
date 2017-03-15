@@ -1,14 +1,4 @@
 window.onload = function() {
-  /*
-  // Toggle source list
-  var sourceButton = document.getElementById('source-button');
-  var sourceList = document.getElementById('sources');
-  sourceButton.addEventListener('click', function(e) {
-    sourceList.classList.toggle('reveal-sources');
-    sourceButton.classList.toggle('ion-plus-circled');
-    sourceButton.classList.toggle('ion-minus-circled');
-  });
-  */
   // Determine browser-specific transition end event
   // From modernizr & https://davidwalsh.name/css-animation-callback
   function whichTransitionEvent(){
@@ -39,7 +29,7 @@ window.onload = function() {
   }
 
   // Scroll effects 
-  // scrolling back to top button
+  // Back to top button
   var topButton = document.getElementById('top-button');
   topButton.addEventListener('click', function() {
     scrollTo('title', 500);
@@ -61,9 +51,9 @@ window.onload = function() {
       e.target.style.color = '#f9c19c';
     });
   });
+  var iconSingle = document.getElementById('icon-single');
+  var iconMany = document.getElementById('icon-many');
   window.onscroll = function() {
-    var iconSingle = document.getElementById('icon-single');
-    var iconMany = document.getElementById('icon-many');
     // Hide/reveal back to top button
     if (!inSectionById('title', 10)) {
       topButton.classList.add('reveal');
@@ -94,33 +84,37 @@ window.onload = function() {
   }
 
   // Checks if top of viewport is in section given by id
+  // (or within "buffer" pixels of the top of it)
   function inSectionById(id, buffer) {
+    var buffer = buffer || 0;
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var section = document.getElementById(id);
     var sectionTop = findPos(section);
     var nextSectionTop = findPos(section.nextElementSibling);
     return (scrollTop > sectionTop - buffer) && (scrollTop < nextSectionTop);
   }
+
+  // Scroll to element with given id
   // from http://stackoverflow.com/a/8918062/3652070 
   function scrollTo(id, duration) {
     var currentTop = document.documentElement.scrollTop || document.body.scrollTop;
     var targetTop = findPos(document.getElementById(id));
+    var distance = targetTop - currentTop;
+    var speed = distance / duration ; //pixels per millisecond
+    var interval = 10;
+
     if (duration <= 0) {
       return;
     }
 
-    var distance = targetTop - currentTop;
-    var speed = distance / duration * 10; //pixels per millisecond
-    console.log(speed, duration, currentTop);
-
     setTimeout(function() {
-      incrementScroll(speed);
-      if (currentTop === targetTop) {
-        return;
-      }
-      scrollTo(id, duration - 10);
-    }, 10);
+      incrementScroll(speed * interval);
+      scrollTo(id, duration - interval);
+    }, interval);
   }
+
+  // Change current scroll position of viewport
+  // accounting for browser differences
   function incrementScroll(value) {
     if (document.documentElement.scrollTop) {
       document.documentElement.scrollTop += value;
@@ -130,16 +124,27 @@ window.onload = function() {
     }
   }
 
-  // Finds y value of given object
+  // Finds y value of top of given element
   // from http://stackoverflow.com/questions/5007530/how-do-i-scroll-to-an-element-using-javascript
-  function findPos(obj) {
+  // Necessary because offsetTop gives number of px from the top of
+  // the closest relatively positioned parent element
+  function findPos(el) {
       var curtop = 0;
-      if (obj.offsetParent) {
+      if (el) {
           do {
-              curtop += obj.offsetTop;
-          } while (obj = obj.offsetParent);
+              curtop += el.offsetTop;
+          } while (el = el.offsetParent);
       return [curtop];
     }
   }
-
+  /*
+  // Toggle source list
+  var sourceButton = document.getElementById('source-button');
+  var sourceList = document.getElementById('sources');
+  sourceButton.addEventListener('click', function(e) {
+    sourceList.classList.toggle('reveal-sources');
+    sourceButton.classList.toggle('ion-plus-circled');
+    sourceButton.classList.toggle('ion-minus-circled');
+  });
+  */
 }
