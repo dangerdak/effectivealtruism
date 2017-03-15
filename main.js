@@ -1,4 +1,5 @@
 window.onload = function() {
+  /*
   // Toggle source list
   var sourceButton = document.getElementById('source-button');
   var sourceList = document.getElementById('sources');
@@ -7,6 +8,7 @@ window.onload = function() {
     sourceButton.classList.toggle('ion-plus-circled');
     sourceButton.classList.toggle('ion-minus-circled');
   });
+  */
   // Determine browser-specific transition end event
   // From modernizr & https://davidwalsh.name/css-animation-callback
   function whichTransitionEvent(){
