@@ -306,24 +306,17 @@ header {
 }
 .top-button {
         display: block;
+        font-size: 130px;
+        line-height: 10px;
         position: fixed;
         right: 0;
-        bottom: 0;
+        bottom: -30px;;
         color: #00342a;
         padding: 6px;
-        font-size: 0.5em;
-        font-family: serif;
         text-align: center;
         cursor: pointer;
         opacity: 0;
         transition: opacity 1s ease;
-}
-.top-icon {
-        display: block;
-        width: 100%;
-        font-size: 1.8em;
-        bottom: -5px;
-        position: relative;
 }
 /****** footer ******/
 footer {
