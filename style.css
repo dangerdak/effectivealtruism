@@ -45,6 +45,9 @@ a {
         text-decoration: none;
         font-size: 1.2em;
 }
+a:hover {
+        color: #60b1cf;
+}
 .text {
         line-height: 1.6em;
 }
@@ -290,8 +293,12 @@ header {
         margin: 0;
 }
 .more ul {
-        list-style-type: none;
         padding: 0;
+        list-style-type: none;
+}
+.more li:before {
+        content: ">";
+        padding-right: 10px;
 }
 .links, .twitter {
         width: 40%;
