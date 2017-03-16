@@ -8,6 +8,7 @@ awk 'BEGIN {OFS = ","; FS = "\t"};{print $3, $1, $2}' amf-nets.txt
 COMBO
 join -t "," -a1 -a2 -o '0 1.2 2.2' sci1514.csv dtw1514.csv --header > all2015.csv
 join -t "," -a1 -a2 -o '0 1.2 1.3 2.2' tmp.csv amf1514.csv --header > all2015.csv
+join -t "," -a1 -a2 -o '0 1.2 1.3 1.4 2.2' oldall2015.csv mc15.csv --header > all2015.csv
 
 FORMATTING
 surround in brackets:

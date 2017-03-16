@@ -266,15 +266,10 @@ header {
         right: -100%;
 }
 .map-container {
-        height: 500px;
+        margin: auto;
         overflow: hidden;
-        position: relative;
-        width: 100%;
 }
 #regions_div {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
 }
 /****** criticism ******/
 /****** more ******/

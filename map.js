@@ -2,41 +2,65 @@ google.charts.load('current', {'packages':['corechart','geochart']});
 google.charts.setOnLoadCallback(drawRegionsMap);
 
 function drawRegionsMap() {
-  var raw = [
-    ['Burundi', 200000,null,null],
-    ['Côte d\'Ivoire', 1070000,null,null],
-    ['Democratic Republic of Congo', 340000,null,4176371],
-    ['Ethiopia', 1220000,44992,null],
-    ['India',null,2227764,null],
-    ['Kenya',null,1658238,null],
-    ['Liberia', 70000,null,null],
-    ['Madagascar', 90000,null,null],
-    ['Malawi', 520000,null,4554015],
-    ['Mauritania',null,null,null],
-    ['Mozambique', 1250000,null,null],
-    ['Niger', 10000,null,null],
-    ['Nigeria',null,10870,null],
-    ['Pakistan',null,1535,null],
-    ['Rwanda', 340000,null,null],
-    ['Sudan', 370000,null,null],
-    ['Tanzania', 20000,null,null],
-    ['Tumikia',null,215890,null],
-    ['Uganda', 100000,null,null],
-    ['Vietnam',null,91519,null],
-    ['Yemen', 130000,null,null],
-    ['Zanzibar', 250000,null,null],
-    ['Zimbabwe',null,null,null]
+  // [country, SCI, DtW, AMF, MC]
+  var spending = [
+    ['Burkina Faso',0,0,0,3052307],
+    ['Burundi', 200000,0,0,0],
+    ['Côte d\'Ivoire', 1070000,0,0,0],
+    ['Democratic Republic of Congo', 340000,0,4176371,0],
+    ['Ethiopia', 1220000,44992,0,0],
+    ['Guinea',0,0,0,1059995],
+    ['India',0,2227764,0,0],
+    ['Kenya',0,1658238,0,0],
+    ['Liberia', 70000,0,0,0],
+    ['Madagascar', 90000,0,0,0],
+    ['Malawi', 520000,0,4554015,0],
+    ['Mali',0,0,0,2831662],
+    ['Mozambique', 1250000,0,0,0],
+    ['Niger', 10000,0,0,1488356],
+    ['Nigeria',0,10870,0,3741732],
+    ['Pakistan',0,1535,0,0],
+    ['Rwanda', 340000,0,0,0],
+    ['Sudan', 370000,0,0,0],
+    ['Tanzania', 20000,0,0,0],
+    ['The Gambia',0,0,0,524578],
+    ['Tumikia',0,215890,0,0],
+    ['Uganda', 100000,0,0,0],
+    ['Vietnam',0,91519,0,0],
+    ['Yemen', 130000,0,0,0],
+    ['Zanzibar', 250000,0,0,0],
   ];
-  var totals = raw.map(el => [el[0], el[1] + el[2] + el[3]]).filter(el => (el[1] > 0));
-  totals.unshift(['Country', 'Total expenditure 2015']);
+  var totals = spending.map(el => [el[0], el[1] + el[2] + el[3] + el[4]]).filter(el => (el[1] > 0));
+  totals.unshift(['Country', 'Total expenditure 2015 ($)']);
 
-  var data = google.visualization.arrayToDataTable(totals);
+  // [SCI, DtW, AMF]
+  var lifePrices = [3647, 2165, 1981, 3226];
 
-  var options = {};
+  var lives = spending.map(function(row) {
+    return [row[0], ...row.slice(1).map(function(amount, index) {
+      return Math.round(amount / lifePrices[index]);
+    })];
+  });
+  // [Country, Total, SCI, DtW, AMF]
+  var totalLives = lives.map(el =>
+    [el[0], el[1] + el[2] + el[3] + el[4], 'Total: ' + (el[1]  + el[2] + el[3] + el[4]) + ' SCI: ' + el[1] + ' DtW: ' +  el[2] + ' AMF: ' + el[3] + ' MC ' + el[4]]);
+  console.log(totalLives);
+
+  var lifeData = new google.visualization.DataTable();
+        lifeData.addColumn('string', 'Country');
+        lifeData.addColumn('number', 'Total Lives');
+        lifeData.addColumn({type: 'string', role: 'tooltip'});
+        lifeData.addRows(totalLives);
+
+
+  var options = {
+    legend: {
+    },
+  };
 
   var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
-  chart.draw(data, options);
+  chart.draw(lifeData, options);
 
   /*********************************/
       google.charts.setOnLoadCallback(drawChart);
