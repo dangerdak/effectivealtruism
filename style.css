@@ -346,30 +346,27 @@ header {
 footer {
         background-color: #f7f7f7;
         font-family: serif;
-        padding: 10px 10%;
-        height: 50%;
 }
 .sources {
-        height: 0;
-        overflow: hidden;
-        transition: height 0.5s ease;
+        width: 80%;
+        margin: auto;
+        padding: 0.1em 0 1em 0;
 }
 .source-list {
-        height: 150px;
-        overflow: hidden;
         font-family: serif;
         font-size: 0.4em;
         list-style-type: none;
-        margin: 0;
+        margin: 10px;
         padding: 0;
-        display: flex;
-        flex-flow: column wrap;
-        align-content: flex-start;
+        -webkit-columns: 3 200px;
+        -moz-columns: 3 200px;
+        columns: 3 200px;
+
 }
 .source-list li {
-        flex: 0 1 auto;
         margin: 1px;
 }
+/*
 .source-button {
         cursor: pointer;
 }
@@ -377,6 +374,7 @@ footer {
         height: 150px;
         transition: height 0.5s ease;
 }
+*/
 
 .reveal {
         transition: opacity 1s, right 1s, left 1s ease;
