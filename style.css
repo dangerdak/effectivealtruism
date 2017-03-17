@@ -292,7 +292,7 @@ header {
         right: -100%;
 }
 .map-container {
-        height: 500px;
+        height: 200px;
         overflow: hidden;
         position: relative;
         width: 100%;
@@ -301,6 +301,16 @@ header {
         width: 100%;
         position: absolute;
         bottom: 0;
+}
+@media all and (min-width: 500px) {
+        .map-container {
+                height: 300px;
+        }
+}
+@media all and (min-width: 800px) {
+        .map-container {
+                height: 500px;
+        }
 }
 /****** criticism ******/
 /****** more ******/
