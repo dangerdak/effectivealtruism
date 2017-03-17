@@ -292,20 +292,8 @@ header {
         right: -100%;
 }
 .map-container {
-        height: 200px;
+        width: 100%;
         overflow: hidden;
-}
-#regions_div {
-}
-@media all and (min-width: 500px) {
-        .map-container {
-                height: 300px;
-        }
-}
-@media all and (min-width: 800px) {
-        .map-container {
-                height: 500px;
-        }
 }
 /****** criticism ******/
 /****** more ******/
