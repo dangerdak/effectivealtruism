@@ -14,7 +14,7 @@ body, html, main {
 }
 .parallax {
         height: 100%;
-        background-attachment: fixed; /* No parallax on mobile */
+        background-attachment: static; /* No parallax on mobile */
         background-position: center;
         background-size: cover;
 }

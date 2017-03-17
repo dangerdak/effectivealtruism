@@ -103,7 +103,6 @@ function drawRegionsMap() {
         var options = {
           colors: ['#649f94', '#245db1', '#f9c19c'],
           lineWidth: 1,
-          title: 'Timeline of Charity Evaluators',
           titleTextStyle: {
             color: '#649f94',
             fontName: 'Rock Salt',
