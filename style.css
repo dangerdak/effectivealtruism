@@ -20,7 +20,7 @@ body, html, main {
 }
 /**/
 body {
-        font-size: 1.6em;
+        font-size: 1.4em;
         color: #649f94;
         font-family: 'Indie Flower', cursive;
 }
@@ -30,8 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {
         color: #00342a;
 }
-h1, h2 {
-        font-size: 2.5em;
+h1, h2, {
+        font-size: 1.5em;
+}
+h3 {
+        font-size: 0.9em;
 }
 section {
         min-height: 100%;
@@ -74,10 +77,10 @@ a:hover {
 }
 .tooltip-text {
         visibility: hidden;
-        width: 340px;
+        width: 200px;
+        margin-left: -100px;
         top: 100%;
         left: 50%;
-        margin-left: -170px;
         background-color: #fff;
         border: 2px solid #ffac1f;
         border-radius: 6px;
@@ -102,7 +105,30 @@ a:hover {
         visibility: visible;
 }
 
+@media all and (min-width: 500px) {
+        h1, h2, {
+                font-size: 1.5em;
+        }
+        h3 {
+                font-size: 0.9em;
+        }
+        .tooltip-text {
+                width: 240px;
+                margin-left: -120px;
+        }
+}
 @media all and (min-width: 800px) {
+        body {
+                font-size: 1.6em;
+        }
+        h1, h2 {
+                font-size: 2.5em;
+        }
+        h3 {
+                font-size: 1em;
+        }
+        .tooltip-text {
+        }
         .parallax {
                 background-attachment: fixed;
         }
