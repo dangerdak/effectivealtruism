@@ -29,8 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1, h2 {
         color: #00342a;
-}
-h1, h2, {
         font-size: 1.5em;
 }
 h3 {
@@ -60,9 +58,6 @@ a:hover {
         vertical-align: super;
         z-index: 1;
 }
-.ref a {
-        padding-left: 0.1em;
-}
 
 .quote {
         color: #f9c19c;
@@ -77,8 +72,8 @@ a:hover {
 }
 .tooltip-text {
         visibility: hidden;
-        width: 200px;
-        margin-left: -100px;
+        width: 150px;
+        margin-left: -75px;
         top: 100%;
         left: 50%;
         background-color: #fff;
@@ -113,8 +108,8 @@ a:hover {
                 font-size: 0.9em;
         }
         .tooltip-text {
-                width: 240px;
-                margin-left: -120px;
+                width: 200px;
+                margin-left: -100px;
         }
 }
 @media all and (min-width: 800px) {
@@ -128,6 +123,8 @@ a:hover {
                 font-size: 1em;
         }
         .tooltip-text {
+                width: 240px;
+                margin-left: -120px;
         }
         .parallax {
                 background-attachment: fixed;
