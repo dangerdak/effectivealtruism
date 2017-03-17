@@ -286,6 +286,9 @@ header {
         flex-flow: row wrap;
         justify-content: space-between;
 }
+.twitter, .links {
+        width: 100%
+}
 .more h2 {
         width: 100%;
 }
@@ -301,9 +304,6 @@ header {
         content: ">";
         padding-right: 10px;
 }
-.links, .twitter {
-        width: 40%;
-}
 .top-button {
         display: block;
         font-size: 130px;
@@ -317,6 +317,11 @@ header {
         cursor: pointer;
         opacity: 0;
         transition: opacity 1s ease;
+}
+@media all and (min-width: 800px) {
+        .twitter, .links {
+                width: 40%
+        }
 }
 /****** footer ******/
 footer {
