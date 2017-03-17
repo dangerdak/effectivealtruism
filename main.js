@@ -54,6 +54,12 @@ window.onload = function() {
   var iconSingle = document.getElementById('icon-single');
   var iconMany = document.getElementById('icon-many');
   window.onscroll = function() {
+    //Hide navbar
+    var navbar = document.getElementById('navbar');
+    navbar.classList.add('hidden');
+    var burger = document.getElementById('burger');
+    burger.classList.remove('close-icon');
+
     // Hide/reveal back to top button
     if (!inSectionById('title', 10)) {
       topButton.classList.add('reveal');
