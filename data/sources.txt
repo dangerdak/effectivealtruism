@@ -10,9 +10,14 @@ AMF - https://www.againstmalaria.com/Distributions.aspx for number of nets distr
 Cost per net estimates from Givewell http://www.givewell.org/charities/against-malaria-foundation#CostperLLINdistributed
  $4.35 in malawi, $5.92 drc
 
+
+MC - spending by country 2015. table 3. http://files.givewell.org/files/DWDA%202009/Malaria%20Consortium/ACCESS-SMC_draft_multi-country_cost_analysis_August_2016.pdf
+
+
 Givewells cost-effectiveness analysis:
 Cost/equivalent life saved 2015
 bednets: 1981
 dtw 2165
 sci 3647
+mc 3226
 http://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models

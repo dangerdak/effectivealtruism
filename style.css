@@ -294,13 +294,8 @@ header {
 .map-container {
         height: 200px;
         overflow: hidden;
-        position: relative;
-        width: 100%;
 }
 #regions_div {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
 }
 @media all and (min-width: 500px) {
         .map-container {
