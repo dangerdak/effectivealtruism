@@ -61,14 +61,14 @@ window.onload = function() {
     burger.classList.remove('close-icon');
 
     // Hide/reveal back to top button
-    if (!inSectionById('title', 10)) {
+    if (!inViewById('title')) {
       topButton.classList.add('reveal');
     }
     else {
       topButton.classList.remove('reveal');
     }
     // blindness animation
-    if (inSectionById('ideas', -300)) {
+    if (inViewById('graphic-blindness')) {
       iconSingle.classList.add('reveal', 'reveal-left');
       iconMany.classList.add('reveal', 'reveal-right');
     }
@@ -77,7 +77,7 @@ window.onload = function() {
       iconMany.classList.remove('reveal', 'reveal-right');
     }
     // intro animation
-    if (inSectionById('intro', 300)) {
+    if (inViewById('graphic-intro')) {
       iconScience.classList.add('reveal', 'reveal-left');
       iconHeart.classList.add('reveal', 'reveal-right');
     }
@@ -89,15 +89,12 @@ window.onload = function() {
     }
   }
 
-  // Checks if top of viewport is in section given by id
-  // (or within "buffer" pixels of the top of it)
-  function inSectionById(id, buffer) {
-    var buffer = buffer || 0;
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var section = document.getElementById(id);
-    var sectionTop = findPos(section);
-    var nextSectionTop = findPos(section.nextElementSibling);
-    return (scrollTop > sectionTop - buffer) && (scrollTop < nextSectionTop);
+  // Checks if element is in viewport
+  function inViewById(id) {
+    var el = document.getElementById(id);
+    var rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.top >= 0 ||
+      rect.bottom <= window.innerHeight && rect.bottom >= 0;
   }
 
   // Scroll to element with given id
