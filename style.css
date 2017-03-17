@@ -295,6 +295,10 @@ header {
         width: 100%;
         overflow: hidden;
 }
+#regions_div {
+        width: 120%;
+        margin-bottom: 20%;
+}
 /****** criticism ******/
 /****** more ******/
 .more-image {
