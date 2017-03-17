@@ -114,7 +114,7 @@ function drawRegionsMap() {
               color: '#ffac1f',
             },
           },
-          pointSize: 15,
+          pointSize: 5,
           height: 200,
           legend: {
             position: 'none',

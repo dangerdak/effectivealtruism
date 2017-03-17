@@ -27,6 +27,29 @@ window.onload = function() {
     this.classList.toggle('close-icon');
     menu.classList.toggle('hidden');
   }
+  // tooltips for mobile
+  var tooltips = document.querySelectorAll('.tooltip');
+  tooltips.forEach(function(tooltip) {
+    var clickable = false;
+    tooltip.addEventListener('click', function(e) {
+      var text = e.target.lastChild;
+      var visible = getComputedStyle(text).visibility === 'visible';
+      // Must hover in order to click
+      if (!visible && !clickable) {
+        clickable = true;
+      }
+      if (clickable) {
+        tooltips.forEach(function(tooltip) {
+          tooltip.lastChild.classList.remove('tooltip-show');
+        });
+        // if it wasn't visible before previous step
+        if (!visible) {
+          text.classList.add('tooltip-show');
+        }
+      }
+      return false;
+    });
+  });
 
   // Scroll effects 
   // Back to top button

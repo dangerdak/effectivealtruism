@@ -96,7 +96,7 @@ a:hover {
         border-style: solid;
         border-color: transparent transparent #ffac1f transparent;
 }
-.tooltip:hover .tooltip-text {
+.tooltip:hover .tooltip-text, .tooltip-show {
         visibility: visible;
 }
 
@@ -257,6 +257,13 @@ header {
 }
 .intro-image {
         background-image: url('https://c1.staticflickr.com/1/614/33256155381_92ab35d422_o.jpg');
+}
+.chart-container {
+        position: relative;
+}
+.chart-container h3 {
+        position: absolute;
+        z-index: 1;
 }
 
 /****** growth ******/
