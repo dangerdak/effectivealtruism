@@ -44,7 +44,6 @@ function drawRegionsMap() {
   // [Country, Total, SCI, DtW, AMF]
   var totalLives = lives.map(el =>
     [el[0], el[1] + el[2] + el[3] + el[4], 'Total: ' + (el[1]  + el[2] + el[3] + el[4]) + ' SCI: ' + el[1] + ' DtW: ' +  el[2] + ' AMF: ' + el[3] + ' MC ' + el[4]]);
-  console.log(totalLives);
 
   var lifeData = new google.visualization.DataTable();
         lifeData.addColumn('string', 'Country');
@@ -56,99 +55,106 @@ function drawRegionsMap() {
   var options = {
     legend: {
     },
+    region: '002',
   };
 
   var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
   chart.draw(lifeData, options);
+}
 
   /*********************************/
-      google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var rows = [
-          [1869,  1, 'Charity Organisation Societies begin in England'],
-          [1941,  1, 'Form 990 enters use'],
-          [1956,  1, 'Foundation Center is founded'],
-          [1966,  1, 'Hewlett Foundation established'],
-          [1982,  1, 'The National Center for Charitable Statistic (NCCS) launches'],
-          [1987,  1, 'The NonProfit Times is launched'],
-          [1988,  1, 'The Chronicle of Philanthropy is founded'],
-          [1992,  1, 'CharityWatch is founded'],
-          [1994,  1, 'GuideStar'],
-          [1999,  1, 'McKinsey sets up a non-profit branch focused on global health, aid and development'],
-          [2000,  1, 'The Bridgespan Group, Faunalytics, FGS, Ministry Watch'],
-          [2001,  1, 'Charity Navigator, Centre for Effective Philanthropy, BBB Wise Giving Alliance'],
-          [2002,  1, 'New Philanthropy Capital'],
-          [2003,  1, 'Stanford Social Innovation Review, the Redstone Strategy Group'],
-          [2005,  1, 'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
-          [2006,  1, 'Nonprofit Marketplace Initiative, Center for High Impact Philanthropy'],
-          [2007,  1, 'GreatNonProfits. GiveWell launches: Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
-          [2008,  1, 'Philanthropedia as Nonprofit Knowledge Network, the International Aid Transparency Initiative'],
-          [2010,  1, 'Jumo, Charity Navigator revamp (CN 2.0)'],
-          [2011,  1, 'Open Philanthropy Project'],
-          [2012,  1, 'Animal Charity Evaluators, focused on effective ways to help animals'],
-          [2013,  1, 'Inside Philanthropy'],
-          [2015,  1, 'ImpactMatters']
-        ];
-        var evalData = new google.visualization.DataTable();
-        evalData.addColumn('number', 'Year');
-        evalData.addColumn('number', 'Evaluators');
-        evalData.addColumn({type: 'string', role: 'tooltip'});
-        evalData.addRows(rows.map(function(row) {
-          return [row[0], row[1], row[0].toString() + ': ' + row[2]];
-        })
-       );
+function drawChart() {
+  var rows = [
+    [1869,  1, 'Charity Organisation Societies begin in England'],
+    [1941,  1, 'Form 990 enters use'],
+    [1956,  1, 'Foundation Center is founded'],
+    [1966,  1, 'Hewlett Foundation established'],
+    [1982,  1, 'The National Center for Charitable Statistic (NCCS) launches'],
+    [1987,  1, 'The NonProfit Times is launched'],
+    [1988,  1, 'The Chronicle of Philanthropy is founded'],
+    [1992,  1, 'CharityWatch is founded'],
+    [1994,  1, 'GuideStar'],
+    [1999,  1, 'McKinsey sets up a non-profit branch focused on global health, aid and development'],
+    [2000,  1, 'The Bridgespan Group, Faunalytics, FGS, Ministry Watch'],
+    [2001,  1, 'Charity Navigator, Centre for Effective Philanthropy, BBB Wise Giving Alliance'],
+    [2002,  1, 'New Philanthropy Capital'],
+    [2003,  1, 'Stanford Social Innovation Review, the Redstone Strategy Group'],
+    [2005,  1, 'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
+    [2006,  1, 'Nonprofit Marketplace Initiative, Center for High Impact Philanthropy'],
+    [2007,  1, 'GreatNonProfits. GiveWell launches: Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
+    [2008,  1, 'Philanthropedia as Nonprofit Knowledge Network, the International Aid Transparency Initiative'],
+    [2010,  1, 'Jumo, Charity Navigator revamp (CN 2.0)'],
+    [2011,  1, 'Open Philanthropy Project'],
+    [2012,  1, 'Animal Charity Evaluators, focused on effective ways to help animals'],
+    [2013,  1, 'Inside Philanthropy'],
+    [2015,  1, 'ImpactMatters']
+  ];
+  var evalData = new google.visualization.DataTable();
+  evalData.addColumn('number', 'Year');
+  evalData.addColumn('number', 'Evaluators');
+  evalData.addColumn({type: 'string', role: 'tooltip'});
+  evalData.addRows(rows.map(function(row) {
+    return [row[0], row[1], row[0].toString() + ': ' + row[2]];
+  })
+ );
 
-        var options = {
-          colors: ['#649f94', '#245db1', '#f9c19c'],
-          lineWidth: 1,
-          titleTextStyle: {
-            color: '#649f94',
-            fontName: 'Rock Salt',
-            fontSize: 20,
-          },
-          tooltip: {
-            textStyle: {
-              fontName: 'serif',
-              color: '#ffac1f',
-            },
-          },
-          pointSize: 5,
-          height: 200,
-          legend: {
-            position: 'none',
-          },
-          vAxis: {
-            textPosition: 'none',
-            ticks: [],
-            baselineColor: '#fff',
-            viewWindowMode: 'maximized',
-          },
-          hAxis: {
-            title: 'Year',
-            viewWindowMode: 'maximized',
-            ticks: [1869, 2015],
-            format: '',
-            gridlines: {
-              color: '#fff',
-            },
-            titleTextStyle: {
-              color: '#649f94',
-            },
-            textStyle: {
-              color: '#649f94',
-            },
-          },
-          animation: {
-            startup: true,
-            duration: 1000,
-            easing: 'out',
-          },
-        };
+  var options = {
+    explorer: {},
+    colors: ['#649f94', '#245db1', '#f9c19c'],
+    lineWidth: 1,
+    titleTextStyle: {
+      color: '#649f94',
+      fontName: 'Rock Salt',
+      fontSize: 20,
+    },
+    tooltip: {
+      textStyle: {
+        fontName: 'serif',
+        color: '#ffac1f',
+      },
+    },
+    pointSize: 5,
+    height: 200,
+    legend: {
+      position: 'none',
+    },
+    vAxis: {
+      textPosition: 'none',
+      ticks: [],
+      baselineColor: '#fff',
+      viewWindowMode: 'maximized',
+    },
+    hAxis: {
+      title: 'Year',
+      viewWindowMode: 'maximized',
+      ticks: [1869, 2015],
+      format: '',
+      gridlines: {
+        color: '#fff',
+      },
+      titleTextStyle: {
+        color: '#649f94',
+      },
+      textStyle: {
+        color: '#649f94',
+      },
+    },
+    animation: {
+      startup: true,
+      duration: 1000,
+      easing: 'out',
+    },
+  };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-        chart.draw(evalData, options);
-      }
+  chart.draw(evalData, options);
 }
+
+window.addEventListener('resize', function() {
+  drawRegionsMap();
+  drawChart();
+});
