@@ -1,3 +1,4 @@
+/*
 google.charts.load('current', {'packages':['corechart','geochart']});
 google.charts.setOnLoadCallback(drawRegionsMap);
 
@@ -43,7 +44,13 @@ function drawRegionsMap() {
   });
   // [Country, Total, SCI, DtW, AMF]
   var totalLives = lives.map(el =>
-    [el[0], el[1] + el[2] + el[3] + el[4], 'Total: ' + (el[1]  + el[2] + el[3] + el[4]) + ' SCI: ' + el[1] + ' DtW: ' +  el[2] + ' AMF: ' + el[3] + ' MC ' + el[4]]);
+    [el[0], el[1] + el[2] + el[3] + el[4], 
+      'Total: ' + (el[1]  + el[2] + el[3] + el[4]) +
+      (el[1] > 0 ? '\nSCI: ' + el[1] : '') + 
+      (el[2] > 0 ? '\nDtW: ' +  el[2] : '') + 
+      (el[3] > 0 ? '\nAMF: ' + el[3] : '') + 
+      (el[4] > 0 ? '\nMC: ' + el[4] : '')]
+  );
 
   var lifeData = new google.visualization.DataTable();
         lifeData.addColumn('string', 'Country');
@@ -62,8 +69,10 @@ function drawRegionsMap() {
 
   chart.draw(lifeData, options);
 }
+*/
 
   /*********************************/
+google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
@@ -197,6 +206,6 @@ function createHtml(year, title, info, url) {
 }
 
 window.addEventListener('resize', function() {
-  drawRegionsMap();
+  //drawRegionsMap();
   drawChart();
 });
