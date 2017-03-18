@@ -142,11 +142,6 @@ function drawChart() {
         color: '#649f94',
       },
     },
-    animation: {
-      startup: true,
-      duration: 1000,
-      easing: 'out',
-    },
   };
 
   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
