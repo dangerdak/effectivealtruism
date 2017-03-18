@@ -98,7 +98,7 @@ function drawChart() {
     ],
     [1994,  1, 
       'GuideStar launches',
-      'An information service providing data on thousands of non-profits, for users to compare and evaluate themselves.',
+      'An information service providing data on thousands of non-profits, for users to compare and evaluate.',
       'http://www.guidestar.org/Home.aspx'
     ],
     [1999,  1, 
