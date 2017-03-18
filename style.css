@@ -249,6 +249,9 @@ header {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
+        background-image: url('low/barley-24.jpg');
+}
+.title-hq {
         background-image: url('img/barley-24.jpg');
 }
 .title h1 {
@@ -270,7 +273,7 @@ header {
         right: -100%;
 }
 .intro-image {
-        background-image: url('img/mind-the-gap-24.jpg');
+        background-image: url('low/mind-the-gap-24.jpg');
 }
 .chart-container {
         position: relative;
@@ -283,11 +286,11 @@ header {
 /****** growth ******/
 /****** movement ******/
 .movement-image {
-        background-image: url('img/clouds-24.jpg');
+        background-image: url('low/clouds-24.jpg');
 }
 /****** ideas ******/
 .ideas-image {
-        background-image: url('img/dandelion-24.jpg');
+        background-image: url('low/dandelion-24.jpg');
 }
 .graphic-blindness {
         justify-content: space-between;
@@ -316,7 +319,7 @@ header {
 /****** criticism ******/
 /****** more ******/
 .more-image {
-        background-image: url('img/rocks-24.jpg');
+        background-image: url('low/rocks-24.jpg');
 }
 .more {
         display: flex;
