@@ -281,8 +281,8 @@ header {
         position: relative;
         right: -100%;
 }
-.intro-image {
-        background-image: url('low/mind-the-gap-24.jpg');
+.growth-image {
+        background-image: url('low/dandelion-24.jpg');
 }
 .chart-container {
         position: relative;
@@ -299,7 +299,7 @@ header {
 }
 /****** ideas ******/
 .ideas-image {
-        background-image: url('low/dandelion-24.jpg');
+        background-image: url('low/mind-the-gap-24.jpg');
 }
 .graphic-blindness {
         justify-content: space-between;

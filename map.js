@@ -77,76 +77,77 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
   var rows = [
-    /*
-    [1941,  1,
-      'Form 990 comes into use in the US',
-      'Provides the public with financial information about non-profits.',
-      'https://en.wikipedia.org/wiki/Form_990'
-    ],
-    [1956,  1,
-      'Foundation Center is founded',
-      'Provides advice and information about grants in the philanthropic sector.',
-      'https://en.wikipedia.org/wiki/Foundation_Center'
-    ],*/
     [1966,  1, 
-      'Hewlett Foundation established',
+      'Hewlett Foundation',
       'Makes grants for an array of issues including effective philanthropy research.',
       'http://www.hewlett.org/about-us/',
-      true
-    ],
-    [1982,  1, 
-      'The National Center for Charitable Statistic (NCCS) launches',
-      'Provides a variety of data on the non-profit sector in the US.',
-      'http://nccs.urban.org/nccs-data-and-tools'
     ],
     [1992,  1, 
-      'CharityWatch is founded',
-      'A charity watchdog which rates charities based on percentage of donations spent on programs, as well as fundraising effiecency.',
+      'CharityWatch',
+      'Rates charities based on percentage of donations spent on programs, as well as fundraising effiecency.',
       'https://www.charitywatch.org/charitywatch-criteria-methodology',
-      true
     ],
     [1994,  1, 
-      'GuideStar launches',
-      'An information service providing data on thousands of non-profits, for users to compare and evaluate.',
+      'GuideStar',
+      'Provides financial data on thousands of non-profits for users to compare and evaluate.',
       'http://www.guidestar.org/Home.aspx'
     ],
     [1999,  1, 
-      'McKinsey sets up a non-profit branch',
-      'Focused on global health, aid and development.',
+      'McKinsey non-profit consultancy branch',
+      'Focuses on global health, aid and development.',
       'http://www.mckinsey.com/industries/social-sector/how-we-help-clients'
     ],
     [2000,  1, 
-      'Faunalytics launches',
+      'Faunalytics',
       'Helps animal advocacy charities evaluate and increase the impact of their programs.',
       'https://faunalytics.org/',
     ],
     [2001,  1, 
-      'Charity Navigator, Centre for Effective Philanthropy'],
-    [2002,  1, 
-      'New Philanthropy Capital'],
-    [2003,  1, 
-      'The Redstone Strategy Group'],
+      'Charity Navigator',
+      'Evaluates charities based on financial efficiency and capacity, using their tax returns.',
+      'https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=1284',
+      'The Centre for Effective Philanthropy',
+      'Helps grantmakers maximise their effectiveness.',
+      'http://effectivephilanthropy.org/about/how-we-work/'
+    ],
     [2005,  1, 
-      'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
+      'Intelligent Giving',
+      'Advised donors on how to make the most satisfactory use of their money. Stopped operating 2009.',
+      'https://en.wikipedia.org/wiki/Intelligent_Giving'
+    ],
     [2006,  1, 
-      'Nonprofit Marketplace Initiative, Center for High Impact Philanthropy'],
+      'Nonprofit Marketplace Initiative',
+      'Initiative of the Hewlett Foundation. Aimed to encourage 10% of donors to be more evindence based in their giving. Closed 2014 as they felt that they weren\'t reaching their goals.',
+      'http://www.hewlett.org/follow-up-on-our-decision-to-end-the-nonprofit-marketplace-initiative/',
+      'Center for High Impact Philanthropy',
+      'Researches causes and methods of measuring social impact.',
+      'http://www.impact.upenn.edu/about/what-we-do/'
+    ],
     [2007,  1, 
-      'GreatNonProfits. GiveWell launches: Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
-    [2008,  1, 
-      'Philanthropedia as Nonprofit Knowledge Network, the International Aid Transparency Initiative'],
+      'GreatNonProfits',
+      'Platform for community-sourced reviews and ratings of non-profits.',
+      'http://www.about.greatnonprofits.org/',
+      'GiveWell',
+      'Provides in-depth analyses on the cost-effectiveness of charities in terms of lives saved/improved per dollar rather than e.g. overhead costs.',
+      'http://www.givewell.org/about'
+    ],
     [2010,  1, 
-      'Jumo, Charity Navigator revamp (CN 2.0)'],
-    [2011,  1, 
-      'Open Philanthropy Project'],
+      'Charity Navigator revamp (CN 2.0)',
+      'Charity Navigator announces move towards 3-dimensional rating system covering financial health, accountability and transparency, and results reporting. The 3rd dimension hasn\'t been incorporated yet.',
+      'https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=1284',
+    ],
     [2012,  1, 
-      'Animal Charity Evaluators, focused on effective ways to help animals'],
+      'Animal Charity Evaluators',
+      'Focuses on effective ways to help animals by prioritizing causes and then evaluating charities and interventions within those causes. Like GiveWell for animals.',
+      'https://animalcharityevaluators.org/donation-advice/top-charities/'
+    ],
   ];
   var evalData = new google.visualization.DataTable();
   evalData.addColumn('number', 'Year');
   evalData.addColumn('number', 'Evaluators');
   evalData.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
   evalData.addRows(rows.map(function(row) {
-    return [row[0], row[1], createHtml(row[0], row[2], row[3], row[4])];
+    return [row[0], row[1], createHtml(row)];
   })
  );
 
@@ -200,9 +201,17 @@ function drawChart() {
   chart.draw(evalData, options);
 }
 
-function createHtml(year, title, info, url) {
-  return '<strong>' + year +  ' ' + title + ': ' + '</strong>' + info + 
-    ' <a target="_blank" href="' + url + '">More info</a>';
+function createHtml(row) {
+  var html = '<strong>' + row.shift() + '</strong>';
+  row.shift();
+  while (row.length) {
+    console.log(row);
+    console.log(row.length);
+    html += '<br><strong> ' + row.shift() + ': ' + '</strong>' + 
+      row.shift() + 
+      ' <a target="_blank" href="' + row.shift() + '">More info</a><br>';
+  }
+  return html;
 }
 
 window.addEventListener('resize', function() {
