@@ -56,9 +56,11 @@ a {
         color: #245db1;
         text-decoration: none;
         font-size: 1.2em;
+        transition: color 0.1s ease;
 }
 a:hover {
         color: #60b1cf;
+        transition: color 0.1s ease;
 }
 .text {
         line-height: 1.6em;
@@ -82,7 +84,7 @@ a:hover {
         border-bottom: 2px dotted;
 }
 .tooltip-text {
-        visibility: hidden;
+        opacity: 0;
         width: 150px;
         margin-left: -75px;
         top: 100%;
@@ -97,6 +99,7 @@ a:hover {
         line-height: 1.2em;
         position: absolute;
         z-index: 1;
+        transition: opacity 0.2s ease;
 }
 .tooltip-text::after {
         content: " ";
@@ -111,7 +114,8 @@ a:hover {
         cursor: pointer;
 }
 .tooltip:hover .tooltip-text, .tooltip-show {
-        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.2s ease;
 }
 
 @media all and (min-width: 500px) {
@@ -178,9 +182,11 @@ header {
         background-color: #fff;
         font-family: serif;
         font-size: 15px;
+        transition: background-color 0.2s ease;
 }
 .navbar a:hover {
-        background-color: #faeda2
+        background-color: #faeda2;
+        transition: background-color 0.2s ease;
 }
 /* Burger menu bits */
 .burger {
@@ -250,9 +256,6 @@ header {
         display: flex;
         flex-flow: row wrap;
         background-image: url('low/barley-24.jpg');
-}
-.title-hq {
-        background-image: url('img/barley-24.jpg');
 }
 .title h1 {
         margin: auto;
@@ -354,9 +357,11 @@ header {
         color: #00342a;
         padding: 6px;
         text-align: center;
-        cursor: pointer;
         opacity: 0;
         transition: opacity 1s ease;
+}
+.top-button.reveal {
+        cursor: pointer;
 }
 @media all and (min-width: 800px) {
         .twitter, .links {
