@@ -270,7 +270,7 @@ header {
         right: -100%;
 }
 .intro-image {
-        background-image: url('img/barley-24.jpg');
+        background-image: url('img/mind-the-gap-24.jpg');
 }
 .chart-container {
         position: relative;
@@ -281,9 +281,6 @@ header {
 }
 
 /****** growth ******/
-.growth-image {
-        background-image: url('img/mind-the-gap-24.jpg');
-}
 /****** movement ******/
 .movement-image {
         background-image: url('img/clouds-24.jpg');
