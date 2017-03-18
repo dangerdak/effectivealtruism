@@ -27,8 +27,16 @@ window.onload = function() {
     this.classList.toggle('close-icon');
     menu.classList.toggle('hidden');
   }
-  // tooltips for mobile
+  // tooltips for mobile (iphone)
   var tooltips = document.querySelectorAll('.tooltip');
+  // Use event capturing:
+  // Event on outer element (body) fires first,
+  // then event on inner element (tooltip)
+  document.getElementById('main').addEventListener('click', function(e) {
+    tooltips.forEach(function(tooltip) {
+      tooltip.lastChild.classList.remove('tooltip-show');
+    });
+  }, true);
   tooltips.forEach(function(tooltip) {
     var clickable = false;
     tooltip.addEventListener('click', function(e) {
@@ -37,18 +45,15 @@ window.onload = function() {
       // Must hover in order to click
       if (!visible && !clickable) {
         clickable = true;
+        document.body.classList.add('touchscreen');
       }
       if (clickable) {
-        tooltips.forEach(function(tooltip) {
-          tooltip.lastChild.classList.remove('tooltip-show');
-        });
         // if it wasn't visible before previous step
         if (!visible) {
           text.classList.add('tooltip-show');
         }
       }
-      return false;
-    });
+    }, true);
   });
 
   // Scroll effects 

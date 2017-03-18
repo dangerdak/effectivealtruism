@@ -96,6 +96,9 @@ a:hover {
         border-style: solid;
         border-color: transparent transparent #ffac1f transparent;
 }
+.touchscreen {
+        cursor: pointer;
+}
 .tooltip:hover .tooltip-text, .tooltip-show {
         visibility: visible;
 }
