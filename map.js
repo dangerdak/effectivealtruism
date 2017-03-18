@@ -68,42 +68,85 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
   var rows = [
-    [1869,  1, 'Charity Organisation Societies begin in England'],
-    [1941,  1, 'Form 990 enters use'],
-    [1956,  1, 'Foundation Center is founded'],
-    [1966,  1, 'Hewlett Foundation established'],
-    [1982,  1, 'The National Center for Charitable Statistic (NCCS) launches'],
-    [1987,  1, 'The NonProfit Times is launched'],
-    [1988,  1, 'The Chronicle of Philanthropy is founded'],
-    [1992,  1, 'CharityWatch is founded'],
-    [1994,  1, 'GuideStar'],
-    [1999,  1, 'McKinsey sets up a non-profit branch focused on global health, aid and development'],
-    [2000,  1, 'The Bridgespan Group, Faunalytics, FGS, Ministry Watch'],
-    [2001,  1, 'Charity Navigator, Centre for Effective Philanthropy, BBB Wise Giving Alliance'],
-    [2002,  1, 'New Philanthropy Capital'],
-    [2003,  1, 'Stanford Social Innovation Review, the Redstone Strategy Group'],
-    [2005,  1, 'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
-    [2006,  1, 'Nonprofit Marketplace Initiative, Center for High Impact Philanthropy'],
-    [2007,  1, 'GreatNonProfits. GiveWell launches: Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
-    [2008,  1, 'Philanthropedia as Nonprofit Knowledge Network, the International Aid Transparency Initiative'],
-    [2010,  1, 'Jumo, Charity Navigator revamp (CN 2.0)'],
-    [2011,  1, 'Open Philanthropy Project'],
-    [2012,  1, 'Animal Charity Evaluators, focused on effective ways to help animals'],
-    [2013,  1, 'Inside Philanthropy'],
-    [2015,  1, 'ImpactMatters']
+    /*
+    [1941,  1,
+      'Form 990 comes into use in the US',
+      'Provides the public with financial information about non-profits.',
+      'https://en.wikipedia.org/wiki/Form_990'
+    ],
+    [1956,  1,
+      'Foundation Center is founded',
+      'Provides advice and information about grants in the philanthropic sector.',
+      'https://en.wikipedia.org/wiki/Foundation_Center'
+    ],*/
+    [1966,  1, 
+      'Hewlett Foundation established',
+      'Makes grants for an array of issues including effective philanthropy research.',
+      'http://www.hewlett.org/about-us/',
+      true
+    ],
+    [1982,  1, 
+      'The National Center for Charitable Statistic (NCCS) launches',
+      'Provide a variety of data on the non-profit sector in the US.',
+      'http://nccs.urban.org/nccs-data-and-tools'
+    ],
+    [1992,  1, 
+      'CharityWatch is founded',
+      'A charity watchdog which rates charities based on percentage of donations spent on programs, as well as fundraising effiecency.',
+      'https://www.charitywatch.org/charitywatch-criteria-methodology',
+      true
+    ],
+    [1994,  1, 
+      'GuideStar launches',
+      'An information service providing data on thousands of non-profits, for users to compare and evaluate themselves.',
+      'http://www.guidestar.org/Home.aspx'
+    ],
+    [1999,  1, 
+      'McKinsey sets up a non-profit branch',
+      'Focused on global health, aid and development.',
+      'http://www.mckinsey.com/industries/social-sector/how-we-help-clients'
+    ],
+    [2000,  1, 
+      'Faunalytics launches',
+      'Helps animal advocacy charities evaluate and increase the impact of their programs.',
+      'https://faunalytics.org/',
+    ],
+    [2001,  1, 
+      'Charity Navigator, Centre for Effective Philanthropy'],
+    [2002,  1, 
+      'New Philanthropy Capital'],
+    [2003,  1, 
+      'Stanford Social Innovation Review, the Redstone Strategy Group'],
+    [2005,  1, 
+      'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
+    [2006,  1, 
+      'Nonprofit Marketplace Initiative, Center for High Impact Philanthropy'],
+    [2007,  1, 
+      'GreatNonProfits. GiveWell launches: Focuses on the cost-effectiveness of charities, rather than e.g. administrative costs.'],
+    [2008,  1, 
+      'Philanthropedia as Nonprofit Knowledge Network, the International Aid Transparency Initiative'],
+    [2010,  1, 
+      'Jumo, Charity Navigator revamp (CN 2.0)'],
+    [2011,  1, 
+      'Open Philanthropy Project'],
+    [2012,  1, 
+      'Animal Charity Evaluators, focused on effective ways to help animals'],
+    [2013,  1, 
+      'Inside Philanthropy'],
+    [2015,  1, 
+      'ImpactMatters']
   ];
   var evalData = new google.visualization.DataTable();
   evalData.addColumn('number', 'Year');
   evalData.addColumn('number', 'Evaluators');
-  evalData.addColumn({type: 'string', role: 'tooltip'});
+  evalData.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
   evalData.addRows(rows.map(function(row) {
-    return [row[0], row[1], row[0].toString() + ': ' + row[2]];
+    return [row[0], row[1], createHtml(row[0], row[2], row[3], row[4])];
   })
  );
 
   var options = {
-    explorer: {},
-    colors: ['#649f94', '#245db1', '#f9c19c'],
+    colors: ['#649f94'],
     lineWidth: 1,
     titleTextStyle: {
       color: '#649f94',
@@ -111,15 +154,24 @@ function drawChart() {
       fontSize: 20,
     },
     tooltip: {
+      isHtml: true,
+      trigger: 'selection',
       textStyle: {
         fontName: 'serif',
         color: '#ffac1f',
       },
+      ignoreBounds: false,
     },
-    pointSize: 5,
+    pointSize: 8,
     height: 200,
     legend: {
       position: 'none',
+    },
+    explorer: {
+      axis: 'horizontal',
+      actions: ['dragToZoom', 'rightClickToReset'],
+      maxZoomOut: 1,
+      keepInBounds: true,
     },
     vAxis: {
       textPosition: 'none',
@@ -130,7 +182,7 @@ function drawChart() {
     hAxis: {
       title: 'Year',
       viewWindowMode: 'maximized',
-      ticks: [1869, 2015],
+      ticks: [1966, 2015],
       format: '',
       gridlines: {
         color: '#fff',
@@ -147,6 +199,11 @@ function drawChart() {
   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
   chart.draw(evalData, options);
+}
+
+function createHtml(year, title, info, url) {
+  return '<strong>' + year +  ' ' + title + ': ' + '</strong>' + info + 
+    ' <a target="_blank" href="' + url + '">More info</a>';
 }
 
 window.addEventListener('resize', function() {

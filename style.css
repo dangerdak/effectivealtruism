@@ -7,6 +7,17 @@
         box-sizing: border-box;
 }
 /* trying out */
+div .google-visualization-tooltip {
+        font-family: serif;
+        color: #ffac1f;
+        border: none;
+        border: 1px solid #ffac1f;
+        box-shadow: none;
+        z-index: 2;
+        background-color: #fff;
+        padding: 0.4em;
+        max-width: 500px;
+}
 
 /* Parallax bits */
 body, html, main {
