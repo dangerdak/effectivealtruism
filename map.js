@@ -87,7 +87,7 @@ function drawChart() {
     ],
     [1982,  1, 
       'The National Center for Charitable Statistic (NCCS) launches',
-      'Provide a variety of data on the non-profit sector in the US.',
+      'Provides a variety of data on the non-profit sector in the US.',
       'http://nccs.urban.org/nccs-data-and-tools'
     ],
     [1992,  1, 
@@ -116,7 +116,7 @@ function drawChart() {
     [2002,  1, 
       'New Philanthropy Capital'],
     [2003,  1, 
-      'Stanford Social Innovation Review, the Redstone Strategy Group'],
+      'The Redstone Strategy Group'],
     [2005,  1, 
       'Intelligent Giving: advises donors on how to make the most satisfactory use of their money.'],
     [2006,  1, 
@@ -131,10 +131,6 @@ function drawChart() {
       'Open Philanthropy Project'],
     [2012,  1, 
       'Animal Charity Evaluators, focused on effective ways to help animals'],
-    [2013,  1, 
-      'Inside Philanthropy'],
-    [2015,  1, 
-      'ImpactMatters']
   ];
   var evalData = new google.visualization.DataTable();
   evalData.addColumn('number', 'Year');
@@ -167,12 +163,6 @@ function drawChart() {
     legend: {
       position: 'none',
     },
-    explorer: {
-      axis: 'horizontal',
-      actions: ['dragToZoom', 'rightClickToReset'],
-      maxZoomOut: 1,
-      keepInBounds: true,
-    },
     vAxis: {
       textPosition: 'none',
       ticks: [],
@@ -182,7 +172,7 @@ function drawChart() {
     hAxis: {
       title: 'Year',
       viewWindowMode: 'maximized',
-      ticks: [1966, 2015],
+      ticks: [1966, 2012],
       format: '',
       gridlines: {
         color: '#fff',

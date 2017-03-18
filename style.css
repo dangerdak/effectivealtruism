@@ -16,7 +16,7 @@ div .google-visualization-tooltip {
         z-index: 2;
         background-color: #fff;
         padding: 0.4em;
-        max-width: 500px;
+        max-width: 400px;
 }
 
 /* Parallax bits */
