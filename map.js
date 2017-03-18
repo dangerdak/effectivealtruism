@@ -199,14 +199,18 @@ function drawChart() {
   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
   chart.draw(evalData, options);
+// Use event capturing:
+// Event on outer element (body) fires first,
+// then event on inner element (tooltip)
+  document.getElementById('main').addEventListener('click', function() {
+    chart.setSelection([{}]);
+  }, true);
 }
 
 function createHtml(row) {
   var html = '<strong>' + row.shift() + '</strong>';
   row.shift();
   while (row.length) {
-    console.log(row);
-    console.log(row.length);
     html += '<br><strong> ' + row.shift() + ': ' + '</strong>' + 
       row.shift() + 
       ' <a target="_blank" href="' + row.shift() + '">More info</a><br>';
@@ -218,3 +222,4 @@ window.addEventListener('resize', function() {
   //drawRegionsMap();
   drawChart();
 });
+
