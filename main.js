@@ -41,7 +41,7 @@ window.onload = function() {
     var clickable = false;
     tooltip.addEventListener('click', function(e) {
       var text = e.target.lastChild;
-      var visible = getComputedStyle(text).opacity > 0;
+      var visible = getComputedStyle(text).visibility === 'visible';
       // Must hover in order to click
       if (!visible && !clickable) {
         clickable = true;
