@@ -199,12 +199,36 @@ function drawChart() {
   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
   chart.draw(evalData, options);
-// Use event capturing:
-// Event on outer element (body) fires first,
-// then event on inner element (tooltip)
+
+  // Close tooltip when document clicked
+  // Unless clicked within chart area
   document.getElementById('main').addEventListener('click', function() {
     chart.setSelection([{}]);
-  }, true);
+  });
+  document.getElementById('chart-container').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+
+  var backButton = document.getElementById('timeline-back');
+  var forwardButton = document.getElementById('timeline-forward');
+  [backButton, forwardButton].forEach(function(btn, index) {
+    btn.addEventListener('click', function(e) {
+      var current = chart.getSelection();
+      if (current.length) {
+        var currentRow = current[0].row;
+        current[0].row = index ?
+           (currentRow + 1) % rows.length : 
+           currentRow === 0 ? rows.length - 1 : currentRow - 1;
+      }
+      else {
+        current = index ?
+          [{row: 0, column: 1}] :
+          [{row: rows.length - 1, column: 1}];
+      }
+      chart.setSelection(current);
+    });
+  });
 }
 
 function createHtml(row) {

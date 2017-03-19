@@ -7,17 +7,6 @@
         box-sizing: border-box;
 }
 /* trying out */
-div .google-visualization-tooltip {
-        font-family: serif;
-        color: #ffac1f;
-        border: none;
-        border: 1px solid #ffac1f;
-        box-shadow: none;
-        z-index: 2;
-        background-color: #fff;
-        padding: 0.4em;
-        max-width: 400px;
-}
 
 /* Parallax bits */
 body, html, main {
@@ -293,6 +282,49 @@ header {
 }
 
 /****** growth ******/
+.timeline-buttons {
+        text-align: center;
+        font-size: 2em;
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        margin-right: -2em;
+        width: 4em;
+}
+.timeline-button {
+        position: absolute;
+        cursor: pointer;
+        width: 1em;
+        transition: color 0.1s ease;
+}
+.timeline-button:hover {
+        color: #60b1cf;
+        transition: color 0.1s ease;
+}
+.timeline-back {
+        left: 0;
+}
+.timeline-forward {
+        right: 0;
+}
+.unselectable {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+}
+div .google-visualization-tooltip {
+        font-family: serif;
+        color: #ffac1f;
+        border: none;
+        border: 1px solid #ffac1f;
+        box-shadow: none;
+        z-index: 2;
+        background-color: #fff;
+        padding: 0.4em;
+        max-width: 400px;
+}
 /****** movement ******/
 .movement-image {
         background-image: url('low/clouds-24.jpg');
