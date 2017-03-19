@@ -329,6 +329,32 @@ div .google-visualization-tooltip {
 .movement-image {
         background-image: url('low/clouds-24.jpg');
 }
+.perlife {
+        display: flex;
+        flex-flow: row wrap;
+}
+.perlife-text {
+        width: 50%;
+        flex: 1 1 auto;
+}
+.perlife-cost {
+        text-align: center;
+        width: 5.5em;
+        font-size: 2em;
+        color: #ffac1f;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin: auto;
+        flex: 0 0 auto;
+}
+.cost {
+        font-size: 1.5em;
+}
+@media all and (min-width: 800px) {
+        .twitter, .links {
+                width: 40%
+        }
+}
 /****** ideas ******/
 .ideas-image {
         background-image: url('low/mind-the-gap-24.jpg');
