@@ -30,70 +30,83 @@
     </nav>
   </header>
   <main id="main">
+
   <section class="title parallax" id="title">
     <h1>An overview of effective altruism</h1>
   </section>
+
   <section id="intro">
     <h2>intro</h2>
-    <div class="text">
     <p>Effective altruism is about doing the most good you can. This might be through donating to charities who have demonstrated their effectiveness or it might be through choice of career. It's a loose movement of people guided by evidence rather than their gut.</p>
-    </div>
     <div class="icon-graphic graphic-intro" id="graphic-intro">
-        <span class="ion-erlenmeyer-flask icon-science" id="icon-science"></span>
-        <span class="ion-heart icon-heart" id="icon-heart"></span>
+      <span class="ion-erlenmeyer-flask icon-science" id="icon-science"></span>
+      <span class="ion-heart icon-heart" id="icon-heart"></span>
     </div>
   </section>
+
   <div class="growth-image parallax">
   </div>
+
   <section id="growth">
-      <h2>growth</h2>
-    <div class="text">
-    <p>1971: The seeds were sown by Peter Singer's <a target="_blank" href="https://www.utilitarian.net/singer/by/1972----.htm">Famine, Affluence and Morality</a>.
-    <blockquote class="quote" cite="https://www.utilitarian.net/singer/by/1972----.htm">If it is in our power to prevent something bad from happening, without thereby sacrificing anything of comparable moral importance, we ought, morally, to do it.</blockquote>Taking this idea to its logical conclusion, Singer suggests that we ought to give until we reach the level of <span class="tooltip">marginal utility<span class="tooltip-text">The point at which, by giving more, you'd reach the same level as the people you're helping</span></span><a href="#1" class="ref">[1]</a>.
+    <h2>growth</h2>
+    <p>1971: The seeds were sown by Peter Singer's 
+    <a target="_blank" href="https://www.utilitarian.net/singer/by/1972----.htm">Famine, Affluence and Morality</a>.
+    <blockquote class="quote" cite="https://www.utilitarian.net/singer/by/1972----.htm">
+      If it is in our power to prevent something bad from happening, 
+      without thereby sacrificing anything of comparable moral importance, 
+      we ought, morally, to do it.
+    </blockquote></p>
+    <p>Taking this idea to its logical conclusion, Singer suggests that we ought to give until we reach the level of <span class="tooltip">marginal utility<span class="tooltip-text">The point at which, by giving more, you'd reach the same level as the people you're helping</span></span><a href="#1" class="ref">[1]</a>.</p>
+
     <p>The rise of charity evaluators has made it easier to decide where to give based on evidence.</p>
+    <div class="chart-container" id="chart-container">
+      <div id="curve_chart">
+      </div>
+      <div class="timeline-buttons">
+        <div class="timeline-back timeline-button unselectable" id="timeline-back"><</div>
+        <div class="timeline-forward timeline-button unselectable" id="timeline-forward">></div>
+      </div>
     </div>
-  <div class="chart-container" id="chart-container">
-    <h3>Timeline of Charity Evaluators</h3>
-    <div id="curve_chart">
-    </div>
-    <div class="timeline-buttons">
-      <div class="timeline-back timeline-button unselectable" id="timeline-back"><</div>
-      <div class="timeline-forward timeline-button unselectable" id="timeline-forward">></div>
-    </div>
-  </div>
-  <span class="text">
     <a href="#1" class="ref">[1]</a>
-  </span>
   </section>
+
   <div class="movement-image parallax">
   </div>
+
   <section id="movement" class="movement">
     <h2>movement</h2>
-    <div class="text">
-      <p>The term <span class="quote">effective altruism</span> came in to use around 2010<a href="#2" class="ref">[2]</a>.</p>
+    <p>The term <span class="quote">effective altruism</span> 
+    came in to use around 2010<a href="#2" class="ref">[2]</a>.</p>
+  
+    <h3>big players:</h3>
+    <p>Since 2007, <a href="http://www.givewell.org" target="_blank">GiveWell</a> has been making it easier to decide where to give by providing in-depth analysis and <span class="tooltip">evaluation<span class="tooltip-text">Criteria: evidence that programs work, cost effectiveness, room for funding, transparency</span></span> of charities<a href="#3" class="ref">[3]</a>. In 2015 they estimate to have moved $110,135,779 to their top picks<a href="#4" class="ref">[4]</a>.</p>
+
+    <p><a href="http://www.givingwhatwecan.org" target="_blank">Giving What We Can</a> launched in 2009, and now has 2,716 members who have donated a total of $22,242,740. Each member pledges to give 10% of their income, amounting to an estimated <span class="tooltip">$1.3 billion<span class="tooltip-text">A prediction based on members' current age and their own estimates of their future salary</span></span> pledged so far<a class="ref" href="#4">[4]</a>.</p>
     
-      <h3>big players:</h3>
-      <p>Since 2007, <a href="http://www.givewell.org" target="_blank">GiveWell</a> has been making it easier to decide where to give by providing in-depth analysis and <span class="tooltip">evaluation<span class="tooltip-text">Criteria: evidence that programs work, cost effectiveness, room for funding, transparency</span></span> of charities<a href="#3" class="ref">[3]</a>. In 2015 they estimate to have moved $110,135,779 to their top picks<a href="#4" class="ref">[4]</a>.</p>
-      <p><a href="http://www.givingwhatwecan.org" target="_blank">Giving What We Can</a> launched in 2009, and now has 2,716 members who have donated a total of $22,242,740. Each member pledges to give 10% of their income, amounting to an estimated <span class="tooltip">$1.3 billion<span class="tooltip-text">A prediction based on members' current age and their own estimates of their future salary</span></span> pledged so far<a class="ref" href="#4">[4]</a>.</p>
-      <p>Taking a gentler approach, <a href="https://www.thelifeyoucansave.org/" target="_blank">The Life You Can Save</a> suggests pledging a minimum of 1% of your income, scaling it up for those with larger salaries. Their 18,798 members are estimated to have donated $1.35 million to highly effective charities in 2015<a href="#5" class="ref">[5]</a>.</p>
-      <p><a href="https://80000hours.org/" target="_blank">80,000 hours</a> helps people find careers where they can do the most good. As of 2015 they led to 188 significant career changes based on their research<a href="#6" class="ref">[6]</a>.</p>
-  </div>
+    <p>Taking a gentler approach, <a href="https://www.thelifeyoucansave.org/" target="_blank">The Life You Can Save</a> suggests pledging a minimum of 1% of your income, scaling it up for those with larger salaries. Their 18,798 members are estimated to have donated $1.35 million to highly effective charities in 2015<a href="#5" class="ref">[5]</a>.</p>
+
+    <p><a href="https://80000hours.org/" target="_blank">80,000 hours</a> helps people find careers where they can do the most good. As of 2015 they led to 188 significant career changes based on their research<a href="#6" class="ref">[6]</a>.</p>
   </section>
+
   <div class="ideas-image parallax">
   </div>
+
   <section id="ideas">
     <h2>ideas</h2>
-    <div class="text">
+
       <h3>your opportunity</h3>
-      <blockquote class="quote" cite="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism/#your-opportunity">Imagine if, one day, you saw a burning building, kicked the door down, ran in and rescued a small child. You'd feel like a hero - it would be one of the most important days of your life. What the evidence shows is that you can do that, every one or two years, for the rest of your working life.</blockquote>
+      <blockquote class="quote" cite="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism/#your-opportunity">
+        Imagine if, one day, you saw a burning building, kicked the door down, ran in and rescued a small child. You'd feel like a hero - it would be one of the most important days of your life. What the evidence shows is that you can do that, every one or two years, for the rest of your working life.
+      </blockquote>
       <div class="perlife">
-        <div class="perlife-text">The average salary in the UK is £26,468<a class="ref" href="#14">[14]</a> - within the richest 3% globally<a class="ref" href="#6">[7]</a>. 10% of this is enough to save <span class="tooltip">1 life per year<span class="tooltip-text">GiveWell estimates that the average cost to save a life through it's recommended interventions is about £2500</span></span><a class="ref" href="#6">[7]</a>, and you'll still be in the richest 4%.</div>
+        <div class="perlife-text"><p>The average salary in the UK is £26,468<a class="ref" href="#14">[14]</a> - within the richest 3% globally<a class="ref" href="#6">[7]</a>. 10% of this is enough to save <span class="tooltip">1 life per year<span class="tooltip-text">GiveWell estimates that the average cost to save a life through it's recommended interventions is about £2500</span></span><a class="ref" href="#6">[7]</a>, and you'll still be in the richest 4%.</p></div>
         <div class="perlife-cost">
           <div class="cost">£2500</div>to save a life
         </div>
       </div>
+
       <h3>more for your money</h3>
-      <p><span class="tooltip">80% of all blindness is preventable<span class="tooltip-text">That's 31 million people, 90% of whom live in the developing world</span></span>. In the UK it costs about £50,000 to train and support a guide dog. In developing countries <span class="tooltip">cataract<span class="tooltip-text">In low-income countries unoperated cataracts are the leading cause of blindless</span></span> surgery costs £30<a class="ref" href="#6">[7]</a><a class="ref" href="#6">[8]</a><a class="ref" href="#9">[9]</a>.</p>
+      <p><span class="tooltip">80% of all blindness<span class="tooltip-text">That's 31 million people, 90% of whom live in the developing world</span></span> is preventable. In the UK it costs about £50,000 to train and support a guide dog. In developing countries <span class="tooltip">cataract<span class="tooltip-text">In low-income countries unoperated cataracts are the leading cause of blindless</span></span> surgery costs £30<a class="ref" href="#6">[7]</a><a class="ref" href="#6">[8]</a><a class="ref" href="#9">[9]</a>.</p>
       <p>That's over 1500 people saved from blindness for the price of 1 guide dog.</p>
       <div class="icon-graphic graphic-blindness" id="graphic-blindness">
         <div class="icon-single" id="icon-single">
@@ -104,22 +117,27 @@
           <img src="https://c2.staticflickr.com/4/3923/33423288885_a661ecc339_o.jpg">
         </div>
       </div>
+
       <h3>career</h3>
       <p>Most people have about 80,000 working hours in their lifetime. This provides a massive potential to do good. For some people this will mean doing good directly, e.g. as a doctor or working for a non-profit. For others it will be less direct such as through research, advocacy or earning to give<a href="#7" class="ref">[7]</a></p>
   </section>
+
   <div class="criticism-image parallax">
   </div>
+
   <section id="criticism">
     <h2>criticism</h2>
-    <div class="text">
-      <h3>Painting vs Child</h3>
-      <p>You see a burning building. Inside there's a <span class="tooltip">picasso painting<span class="tooltip-text">'Women of Algiers' sold in 2015 for £115m/$179m. That's enough to save about 60,000 lives.</span></span> and a child. You only have time to save one of them - which do you save? Effective altruism suggests you should <span class="tooltip">save the painting<span class="tooltip-text">According to Will MacAskill, co-founder of 80,000 hours, Giving What We Can and the Centre for Effective Altruism.</span></span><a href="#12" class="ref">[12]</a>.</p>
+
+    <h3>Painting vs Child</h3>
+    <p>You see a burning building. Inside there's a <span class="tooltip">picasso painting<span class="tooltip-text">'Women of Algiers' sold in 2015 for £115m/$179m. That's enough to save about 60,000 lives.</span></span> and a child. You only have time to save one of them - which do you save? Effective altruism suggests you should <span class="tooltip">save the painting<span class="tooltip-text">According to Will MacAskill, co-founder of 80,000 hours, Giving What We Can and the Centre for Effective Altruism.</span></span><a href="#12" class="ref">[12]</a>.</p>
+
     <h3>Is effective altruism ineffective?</h3>
     <p>People <span class="tooltip">give less when shown statistics<span class="tooltip-text">This is known as the 'indentifiable victim effect'.</span></span> about suffering compared to an anecdote. In fact people even give less when shown both rather than just the anecdote. Could effective altruism lead people to donate less, albeit more effectively?<a href="#13" class="ref">[13]</a></p>
-    </div>
   </section>
+
   <div class="more-image parallax">
   </div>
+
   <section id="more" class="more">
     <h2>more</h2>
     <div class="twitter">
@@ -131,6 +149,7 @@
         #effectivealtruism Tweets
     </a>
     </div>
+
     <div class="links">
       <h3>Interesting things</h3>
       <ul>
@@ -140,9 +159,11 @@
         <li><a href="https://80000hours.org/career-guide/job-satisfaction/" target="_blank">80,000 Hours looks into job satisfaction</a></li>
       </ul>
     </div>
+
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   <span class="top-button unselectable" id="top-button">^</span>
   </section>
+
   <footer>
     <div class="sources">
       <h4>Sources</h4>
