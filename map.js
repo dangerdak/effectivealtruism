@@ -205,7 +205,7 @@ function drawChart() {
   document.getElementById('main').addEventListener('click', function() {
     chart.setSelection([{}]);
   });
-  document.getElementById('chart-container').addEventListener('click', function(e) {
+  document.getElementById('timeline').addEventListener('click', function(e) {
     e.stopPropagation();
   });
 

@@ -6,7 +6,6 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
-/* trying out */
 
 /* Parallax bits */
 body, html, main {
@@ -23,6 +22,7 @@ body {
         font-size: 1.4em;
         color: #649f94;
         font-family: 'Indie Flower', cursive;
+        line-height: 1.6em;
 }
 h1, h2, h3, h4, h5, h6 {
         font-family: 'Rock Salt', cursive;
@@ -58,16 +58,12 @@ a:hover {
         color: #60b1cf;
         transition: color 0.1s ease;
 }
-p {
-        line-height: 1.6em;
-}
 .ref {
         font-family: serif;
         font-size: 0.5em;
         vertical-align: super;
         z-index: 1;
 }
-
 .quote {
         color: #f9c19c;
         font-style: italic;
@@ -95,7 +91,6 @@ p {
         line-height: 1.2em;
         position: absolute;
         z-index: 1;
-        transition: opacity 0.2s ease;
 }
 .tooltip-text::after {
         content: " ";
@@ -159,7 +154,7 @@ header {
         margin: 0;
         list-style-type: none;
         overflow: hidden;
-        transition: right 1s;
+        transition: right 1s ease;
         position: fixed;
         top: 0;
         right: 0;
@@ -181,7 +176,6 @@ header {
 }
 .navbar a:hover {
         background-color: #faeda2;
-        transition: background-color 0.2s ease;
 }
 /* Burger menu bits */
 .burger {
@@ -217,9 +211,6 @@ header {
         transform: rotate(45deg) translate(-8px, -8px);
 }
 /**/
-
-@media all and (min-width: 500px) {
-}
 @media all and (min-width: 800px) {
         nav {
                 width: 80%;
@@ -234,13 +225,6 @@ header {
                 margin: 0;
         }
 
-}
-.icon-graphic {
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        overflow: hidden;
 }
 
 /****** title ******/
@@ -258,6 +242,13 @@ header {
 }
 
 /****** intro ******/
+.icon-graphic {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        overflow: hidden;
+}
 .graphic-intro {
         justify-content: center;
         font-size: 10em;
@@ -270,18 +261,18 @@ header {
         position: relative;
         right: -100%;
 }
+
+/****** growth ******/
 .growth-image {
         background-image: url('low/dandelion-24.jpg');
 }
-.chart-container {
+.timeline {
         position: relative;
 }
-.chart-container h3 {
+.timeline h3 {
         position: absolute;
         z-index: 1;
 }
-
-/****** growth ******/
 .timeline-buttons {
         text-align: center;
         font-size: 2em;
@@ -299,7 +290,6 @@ header {
 }
 .timeline-button:hover {
         color: #60b1cf;
-        transition: color 0.1s ease;
 }
 .timeline-back {
         left: 0;
@@ -353,11 +343,6 @@ div .google-visualization-tooltip {
 .cost {
         font-size: 1.5em;
 }
-@media all and (min-width: 800px) {
-        .twitter, .links {
-                width: 40%
-        }
-}
 /****** ideas ******/
 .ideas-image {
         background-image: url('low/mind-the-gap-24.jpg');
@@ -378,13 +363,6 @@ div .google-visualization-tooltip {
         flex: 0 1 auto;
         position: relative;
         right: -100%;
-}
-.map-container {
-        width: 100%;
-        overflow: hidden;
-}
-#regions_div {
-        width: 100%;
 }
 /****** criticism ******/
 .criticism-image {
@@ -412,6 +390,8 @@ div .google-visualization-tooltip {
 .more ul {
         padding: 0;
         list-style-type: none;
+}
+.more li {
 }
 .more li:before {
         content: ">";
@@ -460,18 +440,8 @@ footer {
 
 }
 .source-list li {
-        margin: 1px;
+        line-height: 1.6em;
 }
-/*
-.source-button {
-        cursor: pointer;
-}
-.reveal-sources {
-        height: 150px;
-        transition: height 0.5s ease;
-}
-*/
-
 .reveal {
         transition: opacity 1s, right 1s, left 1s ease;
         opacity: 1;
