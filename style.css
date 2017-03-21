@@ -56,7 +56,6 @@ a {
 }
 a:hover {
         color: #60b1cf;
-        transition: color 0.1s ease;
 }
 .ref {
         font-family: serif;
@@ -154,14 +153,15 @@ header {
         margin: 0;
         list-style-type: none;
         overflow: hidden;
-        transition: right 1s ease;
+        transition: right 0.5s ease;
         position: fixed;
         top: 0;
         right: 0;
         margin-right: 10%;
+        line-height: 0.6em;
 }
 .hidden {
-        right: -100%;
+        right: -80%;
 }
 .navbar a {
         text-decoration: none;
@@ -314,6 +314,7 @@ div .google-visualization-tooltip {
         background-color: #fff;
         padding: 0.4em;
         max-width: 400px;
+        line-height: 1.4em;
 }
 /****** movement ******/
 .movement-image {
@@ -420,17 +421,21 @@ div .google-visualization-tooltip {
 }
 /****** footer ******/
 footer {
-        background-color: #f7f7f7;
+        background-color: #649f94;
         font-family: serif;
+        color: #f7f7f7;
 }
 .sources {
         width: 80%;
         margin: auto;
         padding: 0.1em 0 1em 0;
 }
+.sources a {
+        color: #f7f7f7;
+}
 .source-list {
         font-family: serif;
-        font-size: 0.4em;
+        font-size: 10px;
         list-style-type: none;
         margin: 10px;
         padding: 0;
@@ -441,6 +446,9 @@ footer {
 }
 .source-list li {
         line-height: 1.6em;
+}
+.sources a:hover {
+        color: #b0e5dc;
 }
 .reveal {
         transition: opacity 1s, right 1s, left 1s ease;
