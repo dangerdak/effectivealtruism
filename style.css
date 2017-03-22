@@ -27,10 +27,16 @@ body {
 h1, h2, h3, h4, h5, h6 {
         font-family: 'Rock Salt', cursive;
         line-height: 1.6em;
+        transform-origin: bottom left;
+        transform: rotate(-1deg);
 }
 h1, h2 {
         color: #00342a;
         font-size: 1.5em;
+}
+h2 {
+        transform-origin: bottom left;
+        transform: rotate(1deg);
 }
 h3 {
         font-size: 0.9em;
@@ -109,7 +115,7 @@ a:hover {
 
 @media all and (min-width: 500px) {
         h1, h2, {
-                font-size: 1.5em;
+                font-size: 2.5em;
         }
         h3 {
                 font-size: 0.9em;
@@ -278,7 +284,6 @@ header {
         font-size: 2em;
         position: absolute;
         right: 50%;
-        bottom: 0.6em;
         margin-right: -2em;
         width: 4em;
 }
@@ -315,6 +320,11 @@ div .google-visualization-tooltip {
         padding: 0.4em;
         max-width: 400px;
         line-height: 1.4em;
+}
+@media all and (min-width: 500px) {
+        .timeline-buttons {
+                bottom: 0.6em;
+        }
 }
 /****** movement ******/
 .movement-image {
@@ -429,6 +439,14 @@ footer {
         width: 80%;
         margin: auto;
         padding: 0.1em 0 1em 0;
+}
+.sources h4 {
+        margin-bottom: 0;
+        margin-left: 1em;
+        width: 6em;
+        transform-origin: bottom left;
+        -webkit-transform: rotate(-5deg) translate(-30%);
+        transform: rotate(-5deg) translate(-30%);
 }
 .sources a {
         color: #f7f7f7;

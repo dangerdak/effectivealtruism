@@ -213,7 +213,7 @@ function drawChart() {
   var backButton = document.getElementById('timeline-back');
   var forwardButton = document.getElementById('timeline-forward');
   [backButton, forwardButton].forEach(function(btn, index) {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function() {
       var current = chart.getSelection();
       if (current.length) {
         var currentRow = current[0].row;
