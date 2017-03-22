@@ -75,6 +75,25 @@ window.onload = function() {
       e.preventDefault();
     });
   });
+
+  // Scroll to references
+  var refs = document.getElementsByClassName('ref');
+  Array.prototype.forEach.call(refs, (function(ref) {
+    ref.addEventListener('click', function(e) {
+      var item = this.getAttribute('href').slice(1);
+      scrollTo(item, 400, flash);
+      e.preventDefault();
+    });
+  }));
+
+  function flash(id) {
+    var source = document.getElementById(id);
+    source.addEventListener(transitionEndEvent, function() {
+      this.classList.remove('flash');
+    });
+    source.classList.add('flash');
+  }
+
   var iconScience = document.getElementById('icon-science');
   var iconHeart = document.getElementById('icon-heart');
   [iconScience, iconHeart].forEach(function(icon) {
@@ -136,7 +155,7 @@ window.onload = function() {
 
   // Scroll to element with given id
   // from http://stackoverflow.com/a/8918062/3652070 
-  function scrollTo(id, duration) {
+  function scrollTo(id, duration, cb) {
     var currentTop = document.documentElement.scrollTop || document.body.scrollTop;
     var targetTop = findPos(document.getElementById(id));
     var distance = targetTop - currentTop;
@@ -144,13 +163,17 @@ window.onload = function() {
     var interval = 10;
 
     if (duration <= 0) {
+      if (cb && typeof cb === 'function') {
+        cb(id);
+      }
       return;
     }
 
     setTimeout(function() {
       incrementScroll(speed * interval);
-      scrollTo(id, duration - interval);
+      scrollTo(id, duration - interval, cb);
     }, interval);
+
   }
 
   // Change current scroll position of viewport
