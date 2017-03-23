@@ -10,7 +10,7 @@ window.onload = function() {
         'OTransition':'oTransitionEnd',
         'MozTransition':'transitionend',
         'WebkitTransition':'webkitTransitionEnd'
-      }
+      };
 
       for(t in transitions){
           if( el.style[t] !== undefined ){
@@ -135,7 +135,7 @@ window.onload = function() {
     else {
       hideIcons(iconHeart, iconScience);
     }
-  }
+  };
 
   function hideIcons() {
     var args = Array.prototype.slice.call(arguments); 
@@ -200,4 +200,4 @@ window.onload = function() {
       return [curtop];
     }
   }
-}
+};
