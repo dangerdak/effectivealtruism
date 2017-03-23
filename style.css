@@ -238,7 +238,7 @@ header {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
-        background-image: url('low/barley-24.jpg');
+        background-image: url('img/barley.jpg');
 }
 .title h1 {
         margin: auto;
@@ -268,7 +268,7 @@ header {
 
 /****** growth ******/
 .growth-image {
-        background-image: url('low/dandelion-24.jpg');
+        background-image: url('img/dandelion.jpg');
 }
 .timeline {
         position: relative;
@@ -326,7 +326,7 @@ div .google-visualization-tooltip {
 }
 /****** movement ******/
 .movement-image {
-        background-image: url('low/clouds-24.jpg');
+        background-image: url('img/clouds.jpg');
 }
 .perlife {
         display: flex;
@@ -354,7 +354,7 @@ div .google-visualization-tooltip {
 }
 /****** ideas ******/
 .ideas-image {
-        background-image: url('low/mind-the-gap-24.jpg');
+        background-image: url('img/mind-the-gap.jpg');
 }
 .graphic-blindness {
         justify-content: space-between;
@@ -375,11 +375,11 @@ div .google-visualization-tooltip {
 }
 /****** criticism ******/
 .criticism-image {
-        background-image: url('low/autumn.jpg');
+        background-image: url('img/autumn.jpg');
 }
 /****** more ******/
 .more-image {
-        background-image: url('low/rocks-24.jpg');
+        background-image: url('img/rocks.jpg');
 }
 .more {
         display: flex;
