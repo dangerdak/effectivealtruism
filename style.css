@@ -204,14 +204,12 @@ header {
         margin-top: 0;
 }
 .close-icon .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(-9px, 6px);
 }
 .close-icon .bar2 {
         opacity: 0;
 }
 .close-icon .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
 }
 /**/
@@ -301,10 +299,6 @@ header {
         right: 0;
 }
 .unselectable {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
         user-select: none;
 }
 div .google-visualization-tooltip {
@@ -443,7 +437,6 @@ footer {
         margin-left: 1em;
         width: 6em;
         transform-origin: bottom left;
-        -webkit-transform: rotate(-5deg) translate(-30%);
         transform: rotate(-5deg) translate(-30%);
 }
 .sources a {
@@ -455,8 +448,6 @@ footer {
         list-style-type: none;
         margin: 10px;
         padding: 0;
-        -webkit-columns: 3 200px;
-        -moz-columns: 3 200px;
         columns: 3 200px;
 
 }
