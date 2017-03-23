@@ -1,77 +1,3 @@
-/*
-google.charts.load('current', {'packages':['corechart','geochart']});
-google.charts.setOnLoadCallback(drawRegionsMap);
-
-function drawRegionsMap() {
-  // [country, SCI, DtW, AMF, MC]
-  var spending = [
-    ['Burkina Faso',0,0,0,3052307],
-    ['Burundi', 200000,0,0,0],
-    ['Côte d\'Ivoire', 1070000,0,0,0],
-    ['Democratic Republic of Congo', 340000,0,4176371,0],
-    ['Ethiopia', 1220000,44992,0,0],
-    ['Guinea',0,0,0,1059995],
-    ['India',0,2227764,0,0],
-    ['Kenya',0,1658238,0,0],
-    ['Liberia', 70000,0,0,0],
-    ['Madagascar', 90000,0,0,0],
-    ['Malawi', 520000,0,4554015,0],
-    ['Mali',0,0,0,2831662],
-    ['Mozambique', 1250000,0,0,0],
-    ['Niger', 10000,0,0,1488356],
-    ['Nigeria',0,10870,0,3741732],
-    ['Pakistan',0,1535,0,0],
-    ['Rwanda', 340000,0,0,0],
-    ['Sudan', 370000,0,0,0],
-    ['Tanzania', 20000,0,0,0],
-    ['The Gambia',0,0,0,524578],
-    ['Tumikia',0,215890,0,0],
-    ['Uganda', 100000,0,0,0],
-    ['Vietnam',0,91519,0,0],
-    ['Yemen', 130000,0,0,0],
-    ['Zanzibar', 250000,0,0,0],
-  ];
-  var totals = spending.map(el => [el[0], el[1] + el[2] + el[3] + el[4]]).filter(el => (el[1] > 0));
-  totals.unshift(['Country', 'Total expenditure 2015 ($)']);
-
-  // [SCI, DtW, AMF]
-  var lifePrices = [3647, 2165, 1981, 3226];
-
-  var lives = spending.map(function(row) {
-    return [row[0], ...row.slice(1).map(function(amount, index) {
-      return Math.round(amount / lifePrices[index]);
-    })];
-  });
-  // [Country, Total, SCI, DtW, AMF]
-  var totalLives = lives.map(el =>
-    [el[0], el[1] + el[2] + el[3] + el[4], 
-      'Total: ' + (el[1]  + el[2] + el[3] + el[4]) +
-      (el[1] > 0 ? '\nSCI: ' + el[1] : '') + 
-      (el[2] > 0 ? '\nDtW: ' +  el[2] : '') + 
-      (el[3] > 0 ? '\nAMF: ' + el[3] : '') + 
-      (el[4] > 0 ? '\nMC: ' + el[4] : '')]
-  );
-
-  var lifeData = new google.visualization.DataTable();
-        lifeData.addColumn('string', 'Country');
-        lifeData.addColumn('number', 'Total Lives');
-        lifeData.addColumn({type: 'string', role: 'tooltip'});
-        lifeData.addRows(totalLives);
-
-
-  var options = {
-    legend: {
-    },
-    region: '002',
-  };
-
-  var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-  chart.draw(lifeData, options);
-}
-*/
-
-  /*********************************/
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
@@ -243,7 +169,6 @@ function createHtml(row) {
 }
 
 window.addEventListener('resize', function() {
-  //drawRegionsMap();
   drawChart();
 });
 
