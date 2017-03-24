@@ -10,7 +10,7 @@ function drawChart() {
     ],
     [1992,  1, 
       'CharityWatch',
-      'Rates charities based on percentage of donations spent on programs, as well as fundraising effiecency.',
+      'Rates charities based on percentage of donations spent on programs, as well as fundraising efficiency.',
       'https://www.charitywatch.org/charitywatch-criteria-methodology',
     ],
     [1994,  1, 
