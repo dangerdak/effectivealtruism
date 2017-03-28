@@ -135,24 +135,24 @@ function drawChart() {
     e.stopPropagation();
   });
 
-
   var backButton = document.getElementById('timeline-back');
   var forwardButton = document.getElementById('timeline-forward');
+  var currentSelection;
   [backButton, forwardButton].forEach(function(btn, index) {
     btn.addEventListener('click', function() {
-      var current = chart.getSelection();
-      if (current.length) {
-        var currentRow = current[0].row;
-        current[0].row = index ?
+      if (chart.getSelection().length) {
+        currentSelection = chart.getSelection();
+        var currentRow = currentSelection[0].row;
+        currentSelection[0].row = index ?
            (currentRow + 1) % rows.length : 
            currentRow === 0 ? rows.length - 1 : currentRow - 1;
       }
-      else {
-        current = index ?
+      else if (!currentSelection) {
+        currentSelection = index ?
           [{row: 0, column: 1}] :
           [{row: rows.length - 1, column: 1}];
       }
-      chart.setSelection(current);
+      chart.setSelection(currentSelection);
     });
   });
 }
